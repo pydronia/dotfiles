@@ -1,6 +1,7 @@
 [user]
 	name = Pydronia
 	email = jackscmail@gmail.com
+	signingkey = /Users/jack/.ssh/id_ed25519.pub
 [core]
 	editor = nvim
 	excludesfile = /Users/jack/.config/git/.gitignore_global
@@ -12,3 +13,5 @@
 	rebase = false
 [credential]
 	helper = osxkeychain
+[gpg]
+	format = ssh
