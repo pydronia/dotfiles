@@ -22,7 +22,7 @@ require("lazy").setup({
 	install = {
 		colorscheme = { "solarized-osaka", "habamax" }
 	},
-	checker = { enabled = true },
+	checker = { enabled = true, frequency = 86400 },
 	ui = {
 		icons = {
 			cmd = "⌘",

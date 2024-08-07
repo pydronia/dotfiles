@@ -2,17 +2,11 @@
 My collection of configuration files
 
 ## Setup
-First install required packages with brew. In particular:
-- zsh
-- git
-- nvim
-- mise
-
-
-Clone this repo:
+1. Install [Homebrew](https://brew.sh/)
+2. Install git
+3. Clone this repo:
 ```
 git clone --recurse-submodules git@github.com:Pydronia/dotfiles.git "${HOME}/.config"
 ```
-Followed by running `setup.sh`
-
-This can be followed by installing any required LSP servers.
+4. Run `setup.sh`
+5. Check that homebrew zsh is set correctly
