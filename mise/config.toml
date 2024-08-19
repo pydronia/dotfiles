@@ -1,4 +1,7 @@
 [tools]
-node = "22"
 usage = "latest"
 python = "latest"
+node = "22"
+
+[settings.status]
+show_env = true
