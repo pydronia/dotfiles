@@ -4,9 +4,10 @@
 # Default colors
 [colors.primary]
 background = '#00141a' #color.base04
-foreground = '#aab6b6' #custom lighter foreground
+foreground = '#9fabad' #color.base0
+# foreground = '#adb8b8' #color.base1
 # foreground = '#839495' #color.fg
-
+#9fabad
 # Normal colors
 [colors.normal]
 black   = '#00141a' #color.base04

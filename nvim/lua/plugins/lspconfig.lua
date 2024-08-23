@@ -56,11 +56,12 @@ return {
 				end
 
 				-- TODO: codeLens, documentHighlight, other util functions (:h lsp-util)
+				-- TODO: Many of these keybinds will be set by default in 0.11
 				define_keymap_if_capable(
 					"textDocument/codeAction",
 					"LSP: Code Action",
 					{ "n", "v" },
-					"<leader>ca",
+					"gra",
 					vim.lsp.buf.code_action)
 				define_keymap_if_capable(
 					"textDocument/declaration",
@@ -93,13 +94,13 @@ return {
 					"textDocument/references",
 					"LSP: References",
 					"n",
-					"gr",
+					"grr",
 					vim.lsp.buf.references)
 				define_keymap_if_capable(
 					"textDocument/remane",
 					"LSP: Rename",
 					"n",
-					"<leader>rn",
+					"grn",
 					vim.lsp.buf.rename)
 				define_keymap_if_capable(
 					"textDocument/signatureHelp",
@@ -111,7 +112,7 @@ return {
 					"textDocument/signatureHelp",
 					"LSP: Signature Help (Insert)",
 					"i",
-					"<C-h>",
+					"<C-s>",
 					vim.lsp.buf.signature_help)
 				define_keymap_if_capable(
 					"textDocument/typeDefinition",

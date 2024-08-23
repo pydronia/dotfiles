@@ -8,6 +8,10 @@ brew "neovim"
 brew "tmux"
 brew "zsh"
 
+# Utilities
+brew "tty-clock"
+brew "fastfetch"
+
 # Casks
 cask "alacritty"
 cask "appcleaner"

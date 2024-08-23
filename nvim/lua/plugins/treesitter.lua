@@ -16,7 +16,8 @@ return {
 		},
 		auto_install = true,
 		highlight = {
-			enable = true
+			enable = true,
+			disable = { "tmux" } -- TODO: re-enable once issue fixed (https://github.com/Freed-Wu/tree-sitter-tmux/issues/20)
 		},
 		incremental_selection = {
 			enable = true,

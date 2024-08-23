@@ -3,6 +3,8 @@
 ----------------
 local opt = vim.opt
 
+opt.spelllang = { "en_au", "cjk" }
+
 opt.termguicolors = true
 
 opt.number = true
@@ -62,6 +64,9 @@ vim.g.format_on_save = true
 -- Global Mappings
 -----------
 vim.g.mapleader = " "
+
+-- Refresh, clear highlight and diff (like default CTRL-L)
+vim.keymap.set('n', '<F5>', '<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>')
 
 -- Accept completion and close wildmenu
 vim.keymap.set("c", "<CR>", function()
