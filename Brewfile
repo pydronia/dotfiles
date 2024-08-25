@@ -6,13 +6,18 @@ brew "git"
 brew "mas"
 brew "mise"
 brew "neovim"
-brew "tlrc"
 brew "tmux"
 brew "zsh"
 
 # Utilities
-brew "tty-clock"
 brew "fastfetch"
+brew "fd"
+brew "ripgrep"
+brew "tlrc"
+brew "tty-clock"
+
+# Language specific tools
+brew "ruff"
 
 # Casks
 cask "alacritty"

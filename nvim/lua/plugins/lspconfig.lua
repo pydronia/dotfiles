@@ -29,6 +29,17 @@ return {
 		-- pyright
 		lspconfig.pyright.setup({
 			capabilities = capabilities,
+			settings = {
+				pyright = {
+					-- Using Ruff's import organizer
+					-- disableOrganizeImports = true,
+				},
+			}
+		})
+
+		-- ruff
+		lspconfig.ruff.setup({
+			capabilities = capabilities,
 		})
 
 		--------------------
@@ -41,7 +52,11 @@ return {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 			callback = function(args)
 				local client = vim.lsp.get_client_by_id(args.data.client_id)
-				if client == nil then return end
+				if client == nil then
+					return
+				elseif client.name == "ruff" then
+					client.server_capabilities.hoverProvider = false
+				end
 
 				-- Can modify handlers to adjust float visuals, close events, etc.
 				-- See https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization
@@ -121,32 +136,8 @@ return {
 					"gy",
 					vim.lsp.buf.type_definition)
 
-				-- Format command and format on save (note, gq uses LSP formatting
-				-- if supported by default. TODO: once ruff is setup, do some
-				-- testing and potially delete this )
+				-- Format on save
 				if client.supports_method("textDocument/formatting") then
-					if client.supports_method("textDocument/rangeFormatting") then
-						-- :Format with visual mode support
-						vim.api.nvim_buf_create_user_command(args.buf, "Format",
-							function(cargs)
-								vim.lsp.buf.format(cargs.range == 0 and { id = args.data.client_id } or {
-									id = args.data.client_id,
-									range = {
-										["start"] = { cargs.line1, 0 },
-										["end"] = { cargs.line2, 0 },
-									}
-								})
-							end,
-							{ desc = "LSP: Format", range = true })
-					else
-						-- :Format without visual mode support
-						vim.api.nvim_buf_create_user_command(args.buf, "Format",
-							function(_)
-								vim.lsp.buf.format({ id = args.data.client_id })
-							end,
-							{ desc = "LSP: Format" })
-					end
-
 					-- Setup format on save
 					vim.api.nvim_create_autocmd("BufWritePre", {
 						buffer = args.buf,

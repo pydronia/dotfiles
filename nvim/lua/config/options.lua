@@ -43,6 +43,9 @@ opt.signcolumn = "number"
 vim.diagnostic.config({
 	underline = true, -- Can also set severity levels
 	virtual_text = false,
+	float = {
+		source = "if_many"
+	},
 	signs = {
 		text = {
 			[vim.diagnostic.severity.HINT] = " ",
@@ -58,7 +61,7 @@ vim.diagnostic.config({
 -- Custom Variables
 -------------------
 -- Toggle if files should format on save (if there's an LSP with formatting support)
-vim.g.format_on_save = true
+vim.g.format_on_save = false
 
 -----------
 -- Global Mappings
