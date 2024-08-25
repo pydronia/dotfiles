@@ -1,10 +1,12 @@
 tap "homebrew/bundle"
 
 # Essentials
+brew "fzf"
 brew "git"
 brew "mas"
 brew "mise"
 brew "neovim"
+brew "tlrc"
 brew "tmux"
 brew "zsh"
 
