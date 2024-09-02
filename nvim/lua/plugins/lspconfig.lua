@@ -42,6 +42,11 @@ return {
 			capabilities = capabilities,
 		})
 
+		-- gopls
+		lspconfig.gopls.setup({
+			capabilities = capabilities
+		})
+
 		--------------------
 		-- General LSP setup
 		--------------------

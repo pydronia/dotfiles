@@ -15,6 +15,7 @@ return {
 					vim.snippet.expand(args.body) -- native snippet engine
 				end,
 			},
+			preselect = cmp.PreselectMode.None,
 			mapping = {
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),

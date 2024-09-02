@@ -2,6 +2,10 @@
 usage = "latest"
 python = "latest"
 node = "22"
+go = "latest"
 
-[settings.status]
-show_env = true
+[env]
+# python
+MISE_PYTHON_DEFAULT_PACKAGES_FILE = "~/.config/mise/.default-python-packages"
+# node
+MISE_NODE_DEFAULT_PACKAGES_FILE = "~/.config/mise/.default-npm-packages"
