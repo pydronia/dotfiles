@@ -15,4 +15,4 @@ cd .config/zsh/.zprezto
 git remote add upstream git@github.com:sorin-ionescu/prezto.git
 
 # Make tmux scripts executable
-chmod +x .config/tmux/scripts/*
+chmod +x ~/.config/tmux/scripts/*
