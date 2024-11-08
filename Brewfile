@@ -16,6 +16,9 @@ brew "ripgrep"
 brew "tlrc"
 brew "tty-clock"
 
+# Language specific tools
+brew "ruff"
+
 # Casks
 cask "alacritty"
 cask "appcleaner"
