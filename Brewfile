@@ -22,6 +22,7 @@ brew "ruff"
 # Casks
 cask "alacritty"
 cask "appcleaner"
+cask "bruno"
 cask "firefox"
 cask "rectangle"
 cask "slack"
