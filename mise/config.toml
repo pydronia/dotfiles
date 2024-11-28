@@ -1,11 +1,11 @@
 [tools]
 usage = "latest"
-python = "latest"
+python = "3.12"
 node = "22"
-go = "latest"
 
 [env]
 # python
 MISE_PYTHON_DEFAULT_PACKAGES_FILE = "~/.config/mise/.default-python-packages"
 # node
 MISE_NODE_DEFAULT_PACKAGES_FILE = "~/.config/mise/.default-npm-packages"
+

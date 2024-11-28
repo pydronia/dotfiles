@@ -1,6 +1,9 @@
 tap "homebrew/bundle"
+tap "nikitabobko/tap"
+tap "FelixKratz/formulae"
 
 # Essentials
+brew "borders"
 brew "fzf"
 brew "git"
 brew "mas"
@@ -20,10 +23,11 @@ brew "tty-clock"
 brew "ruff"
 
 # Casks
+cask "aerospace"
 cask "alacritty"
 cask "appcleaner"
+cask "bruno"
 cask "firefox"
-cask "rectangle"
 cask "slack"
 cask "spotify"
 cask "visual-studio-code"

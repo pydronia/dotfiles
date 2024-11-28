@@ -9,6 +9,8 @@ opt.termguicolors = true
 
 opt.number = true
 
+opt.signcolumn = "yes"
+
 opt.cursorline = true
 
 opt.list = true
@@ -39,20 +41,12 @@ vim.treesitter.language.register("bash", "zsh")
 vim.g.netrw_liststyle = 3
 
 -- Diagnostic config (:h vim.diagnostic.Opts)
-opt.signcolumn = "number"
 vim.diagnostic.config({
 	underline = true, -- Can also set severity levels
 	virtual_text = false,
+	signs = false,
 	float = {
 		source = "if_many"
-	},
-	signs = {
-		text = {
-			[vim.diagnostic.severity.HINT] = " ",
-			[vim.diagnostic.severity.INFO] = " ",
-			[vim.diagnostic.severity.WARN] = " ",
-			[vim.diagnostic.severity.ERROR] = " ",
-		}
 	},
 	severity_sort = true
 })
