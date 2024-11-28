@@ -1,7 +1,9 @@
 tap "homebrew/bundle"
 tap "nikitabobko/tap"
+tap "FelixKratz/formulae"
 
 # Essentials
+brew "borders"
 brew "fzf"
 brew "git"
 brew "mas"
