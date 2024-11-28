@@ -12,5 +12,5 @@
   "nvim-treesitter": { "branch": "master", "commit": "02f8777252fe089c9ea19aa8e19745b505512655" },
   "solarized-osaka.nvim": { "branch": "main", "commit": "b023c3f3b9f1ce5b67c22e4401563d03554921cf" },
   "vim-tmux-navigator": { "branch": "master", "commit": "424b5caa154bff34dc258ee53cec5a8e36cf7ea8" },
-  "which-key.nvim": { "branch": "main", "commit": "b9684c6ec54d8a8452bdcf0d613c7ad0223fc3fe" }
+  "which-key.nvim": { "branch": "main", "commit": "8468c4c52efd975ce7cb8443f134b7c30163db19" }
 }

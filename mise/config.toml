@@ -1,6 +1,6 @@
 [tools]
 usage = "latest"
-python = "3.12"
+python = "latest"
 node = "22"
 
 [env]
