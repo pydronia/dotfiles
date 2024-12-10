@@ -7,7 +7,7 @@ return {
 		local hsl = hslutil.hslToHex
 
 		require("solarized-osaka").setup({
-			transparent = true,
+			transparent = false,
 
 			-- Color overrides
 			on_colors = function(colors)

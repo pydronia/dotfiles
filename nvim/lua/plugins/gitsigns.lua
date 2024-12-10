@@ -7,7 +7,7 @@ return {
 				vim.keymap.set("n", l, r, { desc = desc, buffer = bufnr })
 			end
 
-			map("<leader>ghp", gitsigns.preview_hunk, "Preview hunk")
+			map("<leader>hp", gitsigns.preview_hunk, "Preview hunk")
 			map("<leader>hb", function() gitsigns.blame_line{full=true} end, "Blame line")
 		end
 	}

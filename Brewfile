@@ -3,6 +3,7 @@ tap "nikitabobko/tap"
 tap "FelixKratz/formulae"
 
 # Essentials
+brew "bat"
 brew "borders"
 brew "fzf"
 brew "git"
