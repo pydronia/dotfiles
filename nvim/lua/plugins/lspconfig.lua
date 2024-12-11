@@ -47,6 +47,11 @@ return {
 			capabilities = capabilities
 		})
 
+		-- terraform
+		lspconfig.terraformls.setup({
+			capabilities = capabilities
+		})
+
 		--------------------
 		-- General LSP setup
 		--------------------

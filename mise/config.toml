@@ -8,4 +8,6 @@ node = "22"
 MISE_PYTHON_DEFAULT_PACKAGES_FILE = "~/.config/mise/.default-python-packages"
 # node
 MISE_NODE_DEFAULT_PACKAGES_FILE = "~/.config/mise/.default-npm-packages"
+# go
+MISE_GO_DEFAULT_PACKAGES_FILE = "~/.config/mise/.default-go-packages"
 

@@ -1,8 +1,8 @@
-tap "homebrew/bundle"
 tap "nikitabobko/tap"
 tap "FelixKratz/formulae"
 
 # Essentials
+brew "bat"
 brew "borders"
 brew "fzf"
 brew "git"
@@ -19,15 +19,14 @@ brew "ripgrep"
 brew "tlrc"
 brew "tty-clock"
 
-# Language specific tools
-brew "ruff"
+# Other
+brew "lua-language-server"
 
 # Casks
 cask "aerospace"
 cask "alacritty"
 cask "appcleaner"
 cask "firefox"
-cask "slack"
 cask "spotify"
 cask "visual-studio-code"
 cask "zoom"
