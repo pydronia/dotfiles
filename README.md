@@ -1,12 +1,5 @@
 # dotfiles
-My collection of configuration files. Currently contains configurations for:
-- alacritty
-- git
-- zsh
-- nvim
-- tmux
-- mise
-Also includes a `Brewfile`, and a setup script to simplify new installations
+My collection of configuration files.
 
 ## Setup
 1. Install [Homebrew](https://brew.sh/)

@@ -1,0 +1,10 @@
+tap "hashicorp/tap"
+
+brew "colima"
+brew "direnv"
+brew "docker"
+brew "docker-compose"
+brew "ruff"
+brew "terraform-ls"
+
+cask "bruno"
