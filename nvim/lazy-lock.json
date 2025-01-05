@@ -8,9 +8,9 @@
   "lazy.nvim": { "branch": "main", "commit": "7c493713bc2cb392706866eeba53aaef6c8e9fc6" },
   "nvim-autopairs": { "branch": "master", "commit": "b464658e9b880f463b9f7e6ccddd93fb0013f559" },
   "nvim-cmp": { "branch": "main", "commit": "3403e2e9391ed0a28c3afddd8612701b647c8e26" },
-  "nvim-lspconfig": { "branch": "master", "commit": "b1729954329236f59d075bec79fdee7a6f3ce88b" },
-  "nvim-treesitter": { "branch": "master", "commit": "5874cac1b76c97ebb3fc03225bd7215d4e671cd2" },
+  "nvim-lspconfig": { "branch": "master", "commit": "124be12d782d656b3c75b513a44d9e4728406078" },
+  "nvim-treesitter": { "branch": "master", "commit": "2a496fa4e89034014dd054f04c061ba7d6023a0c" },
   "solarized-osaka.nvim": { "branch": "main", "commit": "b023c3f3b9f1ce5b67c22e4401563d03554921cf" },
   "vim-tmux-navigator": { "branch": "master", "commit": "424b5caa154bff34dc258ee53cec5a8e36cf7ea8" },
-  "which-key.nvim": { "branch": "main", "commit": "9b365a6428a9633e3eeb34dbef1b791511c54f70" }
+  "which-key.nvim": { "branch": "main", "commit": "4ab3bbe976e63b5390d3fca74a52a092a041cd30" }
 }

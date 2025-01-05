@@ -1,4 +1,5 @@
-#temp
+
+
 ## program options
 # less
 export LESS='-g -i -j.5 -M -R -S -w -X -z-4'
