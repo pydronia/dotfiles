@@ -24,9 +24,10 @@ brew "lua-language-server"
 
 # Casks
 cask "aerospace"
-cask "alacritty"
 cask "appcleaner"
+cask "discretescroll"
 cask "firefox"
+cask "ghostty"
 cask "spotify"
 cask "visual-studio-code"
 cask "zoom"

@@ -1,0 +1,41 @@
+# Converted from https://github.com/craftzdog/solarized-osaka.nvim/blob/main/lua/solarized-osaka/colors.lua
+
+# base04
+background = #001419
+# base0
+foreground = #9fabad
+
+# base03
+palette = 0=#002d38
+# red
+palette = 1=#dc312e
+# green
+palette = 2=#859900
+# yellow
+palette = 3=#b38600
+# blue
+palette = 4=#278bd3
+# magenta
+palette = 5=#d33682
+# cyan
+palette = 6=#2aa298
+# base2
+palette = 7=#ede7d4
+
+#base02
+palette = 8=#073541
+# red300
+palette = 9=#f65351
+# green300
+palette = 10=#b7fa00
+# yellow300
+palette = 11=#ffbf00
+# blue300
+palette = 12=#47adf5
+# magenta300
+palette = 13=#f254a1
+# cyan300
+palette = 14=#2beede
+# base3
+palette = 15=#fdf6e2
+
