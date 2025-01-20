@@ -1,9 +1,16 @@
 source ${ZDOTDIR}/general.zsh
 source ${ZDOTDIR}/utility.zsh
 # TODO: source ${ZDOTDIR}/completion.zsh
+
+# prompt
+fpath+=(${ZDOTDIR}/modules/pure)
+autoload -U promptinit; promptinit
+prompt pure
+zstyle :prompt:pure:git:stash show yes
+RPROMPT="NEW %(?..%F{red}%?%f )%F{#586e74}%*%f"
+
 # TODO: prompt theme, syntax-highlighting, history-substring-search, you-should-use
 
-# RPROMPT="%(?..%F{red}%?%f )%F{#586e74}%*%f"
 
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
