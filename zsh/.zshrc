@@ -7,9 +7,9 @@ fpath+=(${ZDOTDIR}/modules/pure)
 autoload -U promptinit; promptinit
 prompt pure
 zstyle :prompt:pure:git:stash show yes
-RPROMPT="NEW %(?..%F{red}%?%f )%F{#586e74}%*%f"
+RPROMPT="NEW %(?..%F{red}%?%f )%F{242}%*%f"
 
-# TODO: prompt theme, syntax-highlighting, history-substring-search, you-should-use
+# TODO: history-substring-search, you-should-use
 
 
 # homebrew
@@ -34,4 +34,9 @@ alias work="cd ~/Documents/work/kumamushi-v2/"
 
 alias tm="tmux"
 alias tms="tmux new-session -A -s $(hostname -s)"
+
+## Final module loads
+# zsh-syntax-highlighting
+source ./modules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets)
 
