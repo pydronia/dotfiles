@@ -9,9 +9,6 @@ prompt pure
 zstyle :prompt:pure:git:stash show yes
 RPROMPT="NEW %(?..%F{red}%?%f )%F{242}%*%f"
 
-# TODO: history-substring-search, you-should-use
-
-
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -37,6 +34,11 @@ alias tms="tmux new-session -A -s $(hostname -s)"
 
 ## Final module loads
 # zsh-syntax-highlighting
-# source ./modules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets)
+source ${ZDOTDIR}/modules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets)
+
+# zsh-history-substring-search
+source ${ZDOTDIR}/modules/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey ${key[Up]} history-substring-search-up
+bindkey ${key[Down]} history-substring-search-down
 
