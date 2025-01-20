@@ -37,6 +37,6 @@ alias tms="tmux new-session -A -s $(hostname -s)"
 
 ## Final module loads
 # zsh-syntax-highlighting
-source ./modules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets)
+# source ./modules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets)
 
