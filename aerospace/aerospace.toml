@@ -36,8 +36,8 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
-# on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-on-focus-changed = ['move-mouse window-lazy-center']
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+# on-focus-changed = ['move-mouse window-lazy-center']
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -103,7 +103,7 @@ alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
 alt-b = 'layout floating tiling'
-alt-x = "fullscreen"
+alt-z = "fullscreen"
 alt-shift-n = "flatten-workspace-tree"
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
@@ -133,15 +133,6 @@ alt-equal = 'resize smart +50'
 alt-0 = 'balance-sizes'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-6 = 'workspace 6'
-alt-7 = 'workspace 7'
-alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
 alt-q = 'workspace Q'
 alt-w = 'workspace W'
 alt-e = 'workspace E'
@@ -152,15 +143,6 @@ alt-d = 'workspace D'
 alt-f = 'workspace F'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
-alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
-alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
-alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
-alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
-alt-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
-alt-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
-alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
-alt-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
 alt-shift-q = 'move-node-to-workspace Q --focus-follows-window'
 alt-shift-w = 'move-node-to-workspace W --focus-follows-window'
 alt-shift-e = 'move-node-to-workspace E --focus-follows-window'

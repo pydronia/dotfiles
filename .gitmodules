@@ -1,3 +1,6 @@
-[submodule "zsh/.zprezto"]
-	path = zsh/.zprezto
+[submodule "zsh_old/.zprezto"]
+	path = zsh_old/.zprezto
 	url = git@github.com:Pydronia/prezto.git
+[submodule "zsh/modules/pure"]
+	path = zsh/modules/pure
+	url = git@github.com:sindresorhus/pure.git

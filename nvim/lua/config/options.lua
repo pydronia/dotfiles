@@ -8,6 +8,7 @@ opt.spelllang = { "en_au", "cjk" }
 opt.termguicolors = true
 
 opt.number = true
+opt.relativenumber = true
 
 opt.signcolumn = "yes"
 
