@@ -1,9 +1,6 @@
 [submodule "zsh/modules/pure"]
 	path = zsh/modules/pure
 	url = git@github.com:sindresorhus/pure.git
-[submodule "zsh_old/.zprezto"]
-	path = zsh_old/.zprezto
-	url = git@github.com:Pydronia/prezto.git
 [submodule "zsh/modules/zsh-syntax-highlighting"]
 	path = zsh/modules/zsh-syntax-highlighting
 	url = git@github.com:zsh-users/zsh-syntax-highlighting.git

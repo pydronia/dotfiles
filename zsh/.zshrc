@@ -32,6 +32,9 @@ alias work="cd ~/Documents/work/kumamushi-v2/"
 alias tm="tmux"
 alias tms="tmux new-session -A -s $(hostname -s)"
 
+## Functions
+# TODO: write some functions for quick config updates
+
 ## Final module loads
 # zsh-syntax-highlighting
 source ${ZDOTDIR}/modules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
