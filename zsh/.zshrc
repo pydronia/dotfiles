@@ -7,7 +7,7 @@ fpath+=(${ZDOTDIR}/modules/pure)
 autoload -U promptinit; promptinit
 prompt pure
 zstyle :prompt:pure:git:stash show yes
-RPROMPT="NEW %(?..%F{red}%?%f )%F{242}%*%f"
+RPROMPT="%(?..%F{red}%?%f )%F{242}%*%f"
 
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
