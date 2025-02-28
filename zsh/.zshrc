@@ -1,7 +1,8 @@
-source ${ZDOTDIR}/general.zsh
-source ${ZDOTDIR}/utility.zsh
-# TODO: source ${ZDOTDIR}/completion.zsh
+source ${ZDOTDIR}/general.zsh # General zsh options
+source ${ZDOTDIR}/utility.zsh # General utility options/aliases
+source ${ZDOTDIR}/completion.zsh # Completions setup
 
+## Initial module loads
 # prompt
 fpath+=(${ZDOTDIR}/modules/pure)
 autoload -U promptinit; promptinit
@@ -9,6 +10,10 @@ prompt pure
 zstyle :prompt:pure:git:stash show yes
 RPROMPT="%(?..%F{red}%?%f )%F{242}%*%f"
 
+# zsh-you-should-use
+source ${ZDOTDIR}/modules/zsh-you-should-use/you-should-use.plugin.zsh
+
+## Program setup
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -26,14 +31,30 @@ export FZF_DEFAULT_OPTS="--walker-skip=.git,node_modules,Library"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers {}'"
 source <(fzf --zsh)
 
+## Named directories
+hash -d km="$HOME/Documents/work/kumamushi-v2/"
+
 ## Aliases
-alias work="cd ~/Documents/work/kumamushi-v2/"
+alias vea="source .venv/bin/activate"
+
+alias g="git"
+alias gs="git status"
+alias gl="git log"
+
+alias ga="git add"
+alias gaa="git add -A"
+
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gcAm="git add -A; git commit -m"
+
+alias gco="git checkout"
+
+alias gp="git push"
+alias gfm="git pull"
 
 alias tm="tmux"
 alias tms="tmux new-session -A -s $(hostname -s)"
-
-## Functions
-# TODO: write some functions for quick config updates
 
 ## Final module loads
 # zsh-syntax-highlighting

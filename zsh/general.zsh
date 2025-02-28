@@ -8,16 +8,9 @@ setopt PUSHD_IGNORE_DUPS # Ignore multiple copies of same directory
 setopt PUSHD_SILENT # Don't print stack after pushd, popd
 setopt PUSHD_TO_HOME # pushd = pushd ~
 
-# Completion
-setopt ALWAYS_TO_END # Move cursor to end of completion
-setopt AUTO_LIST # List on ambiguous completion
-setopt AUTO_MENU # Show menu after second tab press
-setopt AUTO_PARAM_SLASH # Add trailing slash if parameter is directory
-setopt COMPLETE_IN_WORD # Complete from both ends
-# unsetopt LIST_BEEP
-
 # Expansion
 setopt EXTENDED_GLOB
+unsetopt CASE_GLOB
 
 # History
 setopt EXTENDED_HISTORY
@@ -47,7 +40,11 @@ unsetopt HUP
 setopt LONG_LIST_JOBS
 
 # Other
-KEYTIMEOUT=5
+KEYTIMEOUT=20
+
+## Setup run-help
+unalias run-help 2>/dev/null
+autoload -Uz run-help
 
 ## Editor, bindings
 # vim mappings
@@ -102,6 +99,10 @@ bindkey ${key[Insert]} overwrite-mode
 
 bindkey ${key[BackTab]} reverse-menu-complete
 
+# run-help
+# This is using the code that ghostty sends for control-m (fixterms)
+bindkey '\e[109;5u' run-help
+
 # Magic space
 bindkey ' ' magic-space
 
@@ -117,7 +118,7 @@ autoload -Uz url-quote-magic && zle -N self-insert url-quote-magic
 # Double dot expansion
 double-dot-expand() {
 	# Expand .. at the beginning, after space, or after any of ! " & ' / ; < > |
-	if [[ ${LBUFFER} == *.. ]]; then
+	if [[ ${LBUFFER} == (|*[[:space:]!\"\&\'/\;\<\>|]).. ]]; then
 	  LBUFFER+=/..
 	else
 	  LBUFFER+=.
@@ -140,8 +141,4 @@ if [[ -n ${terminfo[smkx]} && -n ${terminfo[rmkx]} ]]; then
 	add-zle-hook-widget -Uz line-init start-application-mode
 	add-zle-hook-widget -Uz line-finish stop-application-mode
 fi
-
-## Setup run-help
-unalias run-help 2>/dev/null
-autoload -Uz run-help
 

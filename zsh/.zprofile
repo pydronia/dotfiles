@@ -5,17 +5,12 @@ if [[ $(uname) == "Darwin" ]]; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# paths (ensure uniqueness, add local)
+# path (ensure uniqueness, add local)
 typeset -gU cdpath fpath mailpath path
 
 path=(
 	$HOME/.local/bin
 	$path
-)
-
-fpath=(
-	$HOME/.local/share/zsh/completions
-	$fpath
 )
 
 # envs
