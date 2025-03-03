@@ -14,6 +14,11 @@ RPROMPT="%(?..%F{red}%?%f )%F{242}%*%f"
 source ${ZDOTDIR}/modules/zsh-you-should-use/you-should-use.plugin.zsh
 
 ## Program setup
+
+# nvim
+# TEMP TESTING LAZYVIM
+export NVIM_APPNAME="lazyvim"
+
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -42,6 +47,7 @@ alias vea="source .venv/bin/activate"
 alias g="git"
 alias gs="git status"
 alias gl="git log"
+alias gd="git diff"
 
 alias ga="git add"
 alias gaa="git add -A"
