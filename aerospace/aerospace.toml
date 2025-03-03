@@ -174,3 +174,6 @@ backspace = ['close-all-windows-but-current', 'mode main']
 if.window-title-regex-substring = "Picture-in-Picture"
 run = "layout floating"
 
+[[on-window-detected]]
+if.window-title-regex-substring = "Bitwarden"
+run = "layout floating"
