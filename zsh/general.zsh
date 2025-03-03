@@ -40,7 +40,7 @@ unsetopt HUP
 setopt LONG_LIST_JOBS
 
 # Other
-KEYTIMEOUT=20
+KEYTIMEOUT=5
 
 ## Setup run-help
 unalias run-help 2>/dev/null
