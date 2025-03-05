@@ -14,7 +14,6 @@ RPROMPT="%(?..%F{red}%?%f )%F{242}%*%f"
 source ${ZDOTDIR}/modules/zsh-you-should-use/you-should-use.plugin.zsh
 
 ## Program setup
-
 # nvim
 # TEMP TESTING LAZYVIM
 export NVIM_APPNAME="lazyvim"

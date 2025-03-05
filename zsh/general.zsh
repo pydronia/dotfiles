@@ -128,6 +128,28 @@ zle -N double-dot-expand
 bindkey . double-dot-expand
 bindkey -M isearch . self-insert
 
+## hooks
+autoload -Uz add-zle-hook-widget
+autoload -Uz add-zsh-hook
+
+# Cursor shape adjustment if NOT in Ghostty (already provides shell integration)
+if [[ $TERM != *ghostty* ]]; then
+	set-cursor-style() {
+		case ${KEYMAP-} in
+			vicmd|visual) echo -ne "\e[1 q";;
+			*) echo -ne "\e[5 q";;
+		esac
+	}
+	zle -N set-cursor-style
+	add-zle-hook-widget -Uz keymap-select set-cursor-style
+	add-zle-hook-widget -Uz line-init set-cursor-style
+
+	reset-cursor-style() {
+		echo -ne "\e[0 q"
+	}
+	add-zsh-hook -Uz preexec reset-cursor-style
+fi
+
 # Set application mode ("keyboard-transit" mode?)
 if [[ -n ${terminfo[smkx]} && -n ${terminfo[rmkx]} ]]; then
 	# Enable application mode when zle is active
@@ -137,7 +159,6 @@ if [[ -n ${terminfo[smkx]} && -n ${terminfo[rmkx]} ]]; then
 	stop-application-mode() {
 		echoti rmkx
 	}
-	autoload -Uz add-zle-hook-widget
 	add-zle-hook-widget -Uz line-init start-application-mode
 	add-zle-hook-widget -Uz line-finish stop-application-mode
 fi
