@@ -43,6 +43,7 @@ hash -d km="$HOME/Documents/work/kumamushi-v2/"
 ## Aliases
 alias vea="source .venv/bin/activate"
 
+# git
 alias g="git"
 alias gs="git status"
 alias gl="git log"
@@ -59,7 +60,9 @@ alias gco="git checkout"
 
 alias gp="git push"
 alias gfm="git pull"
+alias gfr="git pull --rebase"
 
+# tmux
 alias tm="tmux"
 alias tms="tmux new-session -A -s $(hostname -s)"
 
