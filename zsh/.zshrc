@@ -37,9 +37,6 @@ export FZF_DEFAULT_OPTS="--walker-skip=.git,node_modules,Library"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers {}'"
 source <(fzf --zsh)
 
-## Named directories
-hash -d km="$HOME/Documents/work/kumamushi-v2/"
-
 ## Aliases
 alias vea="source .venv/bin/activate"
 
@@ -65,6 +62,13 @@ alias gfr="git pull --rebase"
 # tmux
 alias tm="tmux"
 alias tms="tmux new-session -A -s $(hostname -s)"
+
+## Environment specific setup
+if [[ "$(hostname)" == MA* ]]; then
+	export LEDGER_FILE="$HOME/Documents/Finance/hledger.journal"
+else
+	hash -d km="$HOME/Documents/work/kumamushi-v2/"
+fi
 
 ## Final module loads
 # zsh-syntax-highlighting
