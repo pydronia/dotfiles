@@ -23,7 +23,7 @@ if [ -n "$player" ]; then
 		if ((${#final_info} > available_width)); then
 			echo -nE "${final_info:0:available_width}…"
 		else
-			echo -nE $final_info
+			echo -nE $final_info " "
 		fi
 	fi
 fi
