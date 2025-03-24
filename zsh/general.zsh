@@ -10,6 +10,7 @@ setopt PUSHD_TO_HOME # pushd = pushd ~
 
 # Expansion
 setopt EXTENDED_GLOB
+setopt GLOB_DOTS
 unsetopt CASE_GLOB
 
 # History

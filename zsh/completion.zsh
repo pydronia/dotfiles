@@ -7,6 +7,7 @@ fpath=(
 	$fpath
 )
 
+# Update dumpfile if neccessary and load completions
 # Taken from https://github.com/zimfw/completion/blob/master/init.zsh
 () {
 	builtin emulate -L zsh -o EXTENDED_GLOB
@@ -47,10 +48,12 @@ fpath=(
 # Zsh options
 setopt ALWAYS_TO_END # Move cursor to end of completion
 setopt AUTO_LIST # List on ambiguous completion
-setopt AUTO_MENU # Show menu after second tab press
+setopt MENU_COMPLETE # Insert first match immediately
 setopt AUTO_PARAM_SLASH # Add trailing slash if parameter is directory
 setopt COMPLETE_IN_WORD # Complete from both ends
 # unsetopt LIST_BEEP
+
+zmodload zsh/complist
 
 # Completion options (also a lot from zim and prezto configs)
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -87,3 +90,7 @@ zstyle ':completion:*:history-words' stop yes
 zstyle ':completion:*:history-words' remove-all-dups yes
 zstyle ':completion:*:history-words' list false
 zstyle ':completion:*:history-words' menu yes
+
+# Bindings
+bindkey -M menuselect "\e" send-break
+
