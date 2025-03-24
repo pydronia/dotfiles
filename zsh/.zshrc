@@ -1,3 +1,6 @@
+## TODO:
+# - Write function to open git repository in browser
+
 source ${ZDOTDIR}/general.zsh # General zsh options
 source ${ZDOTDIR}/utility.zsh # General utility options/aliases
 source ${ZDOTDIR}/completion.zsh # Completions setup
