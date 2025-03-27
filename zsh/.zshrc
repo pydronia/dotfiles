@@ -71,6 +71,7 @@ if [[ "$(hostname)" == MA* ]]; then
 	export LEDGER_FILE="$HOME/Documents/Finance/hledger.journal"
 else
 	hash -d km="$HOME/Documents/work/kumamushi-v2/"
+	source <(kubectl completion zsh)
 fi
 
 ## Final module loads
