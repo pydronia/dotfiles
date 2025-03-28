@@ -133,8 +133,9 @@ bindkey -M isearch . self-insert
 autoload -Uz add-zle-hook-widget
 autoload -Uz add-zsh-hook
 
-# Cursor shape adjustment if NOT in Ghostty (already provides shell integration)
+# Shell features if not in Ghostty (already provides shell integration)
 if [[ $TERM != *ghostty* ]]; then
+	# Cursor shape adjustment
 	set-cursor-style() {
 		case ${KEYMAP-} in
 			vicmd|visual) echo -ne "\e[1 q";;
@@ -149,6 +150,8 @@ if [[ $TERM != *ghostty* ]]; then
 		echo -ne "\e[0 q"
 	}
 	add-zsh-hook -Uz preexec reset-cursor-style
+
+	# TODO: Emit OSC 133 codes
 fi
 
 # Set application mode ("keyboard-transit" mode?)
