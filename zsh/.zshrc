@@ -54,7 +54,8 @@ alias gaa="git add -A"
 
 alias gc="git commit"
 alias gcm="git commit -m"
-alias gcAm="git add -A; git commit -m"
+
+alias gAcm="git add -A; git commit -m"
 
 alias gco="git checkout"
 
