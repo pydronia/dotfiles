@@ -15,7 +15,7 @@ fpath=(
 	# last modification time of all the completion functions in fpath.
 	local zdumpfile zstats zold_dat
 	local -i zdump_dat=1
-	zdumpfile=${ZDOTDIR}/.zcompdump
+	zdumpfile=${ZDOTDIR}/.zsh_data/.zcompdump
 
 	# Get last modified time of all completion files in fpath, store in zstats
 	LC_ALL=C local -r zcomps=(${^fpath}/^([^_]*|*~|*.zwc)(N))
@@ -54,7 +54,7 @@ unsetopt LIST_AMBIGUOUS # Auto-list even on unambiguous prefix insertion
 setopt AUTO_MENU # Use menu completion after second tab press
 setopt AUTO_PARAM_SLASH # Add trailing slash if parameter is directory
 setopt COMPLETE_IN_WORD # Complete from both ends
-# unsetopt LIST_BEEP
+# unsetopt LIST_BEEP # Disable beeping on ambiguous completion (commented until ghostty supports BEEP so I can decide if I want it or not)
 
 zmodload zsh/complist
 
@@ -77,7 +77,7 @@ zstyle ':completion:*' format '%F{yellow}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
 
-zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'r:|=*' 'l:|=* r:|=*' # Allows almost "smart case" completion, and completion on both sides of word
 
 # Ignore useless commands and functions
 zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec)|prompt_*)'
@@ -85,7 +85,7 @@ zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec)|prompt_*)'
 zstyle ':completion:*:*:-subscript-:*' tag-order 'indexes' 'parameters'
 
 # Directories
-zstyle ':completion:*:*:cd:*:directory-stack' menu yes select
+zstyle ':completion:*:*:cd:*:directory-stack' menu yes select # Enter menu completion immediately for directory stack (cd -<TAB>)
 zstyle ':completion:*' squeeze-slashes true
 
 # History
@@ -95,5 +95,5 @@ zstyle ':completion:*:history-words' list false
 zstyle ':completion:*:history-words' menu yes
 
 # Bindings
-bindkey -M menuselect "\e" send-break
+bindkey -M menuselect "\e" send-break # exit menu selection when pressing escape
 

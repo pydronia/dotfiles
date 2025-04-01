@@ -1,6 +1,12 @@
 # macOS specific
 if [[ $(uname) == "Darwin" ]]; then
+	# disable annoying Terminal.app .zsh_sessions
+	if [[ $TERM_PROGRAM == "Apple_Terminal" ]]; then
+		export SHELL_SESSIONS_DISABLE=1
+	fi
+
 	export BROWSER='open'
+
 	# homebrew
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi

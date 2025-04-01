@@ -9,9 +9,8 @@ setopt PUSHD_SILENT # Don't print stack after pushd, popd
 setopt PUSHD_TO_HOME # pushd = pushd ~
 
 # Expansion
-setopt EXTENDED_GLOB
-setopt GLOB_DOTS
-unsetopt CASE_GLOB
+setopt EXTENDED_GLOB # Use zsh's extended globbing syntax
+setopt GLOB_DOTS # Allow matching for files starting with "."
 
 # History
 setopt EXTENDED_HISTORY
@@ -24,7 +23,7 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_VERIFY
 setopt SHARE_HISTORY
 
-HISTFILE="${ZDOTDIR}/.zsh_history"
+HISTFILE="${ZDOTDIR}/.zsh_data/.zsh_history"
 HISTSIZE=20000
 SAVEHIST=10000
 

@@ -1,4 +1,4 @@
-### SET GENERAL PROGRAM CONFIG AND ALIASES
+### SET STANDARD PROGRAM CONFIG AND ALIASES
 
 # cd
 alias -- -='cd -'
@@ -6,9 +6,10 @@ alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 # ls
+# Colors made using https://geoff.greer.fm/lscolors/
 # BSD
 export LSCOLORS='ExfxcxdxbxGxDxabagacad'
-# Linux (this is needed for completion "list-colors")
+# Linux (this is needed for zsh completion "list-colors")
 export LS_COLORS='di=1;34:ln=35:so=32:pi=33:ex=31:bd=1;36:cd=1;33:su=30;41:sg=30;46:tw=30;42:ow=30;43'
 alias ls='ls -G'
 alias ll='ls -lh'
