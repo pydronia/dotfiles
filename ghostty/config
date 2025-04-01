@@ -13,7 +13,9 @@ mouse-hide-while-typing = true
 
 quit-after-last-window-closed = true
 
-quick-terminal-position = bottom
+quick-terminal-position = top
+quick-terminal-screen = mouse
+quick-terminal-animation-duration = 0
 
 macos-option-as-alt = true
 macos-titlebar-style = hidden
