@@ -46,9 +46,12 @@ fpath=(
 }
 
 # Zsh options
+# These options result in the first press listing options + completing any unambigious prefixes,
+# and the second press starting menu completion (selecting the first completion)
 setopt ALWAYS_TO_END # Move cursor to end of completion
 setopt AUTO_LIST # List on ambiguous completion
-setopt MENU_COMPLETE # Insert first match immediately
+unsetopt LIST_AMBIGUOUS # Auto-list even on unambiguous prefix insertion
+setopt AUTO_MENU # Use menu completion after second tab press
 setopt AUTO_PARAM_SLASH # Add trailing slash if parameter is directory
 setopt COMPLETE_IN_WORD # Complete from both ends
 # unsetopt LIST_BEEP
