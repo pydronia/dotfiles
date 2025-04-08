@@ -40,3 +40,5 @@ opt.timeoutlen = 500
 -------------------
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+-- TODO: https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua#L164
