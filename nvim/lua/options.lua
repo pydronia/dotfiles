@@ -25,15 +25,18 @@ opt.smartcase = true
 opt.splitbelow = true
 opt.splitright = true
 
-opt.confirm = true
-
 opt.spelllang = { "en_au", "cjk" }
 opt.termguicolors = true
 opt.clipboard = "unnamedplus"
 opt.wildmode = "longest:full,full"
+opt.confirm = true
 
 opt.updatetime = 350
 opt.timeoutlen = 500
+
+-- After LSP Setup
+-- opt.signcolumn = <something>
+-- vim.diagnostic.config....
 
 -------------------
 -- General Mappings
@@ -42,3 +45,15 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 vim.keymap.set("n", "<Esc>", "<Cmd>noh<CR>")
+
+---------------
+-- Autocommands
+---------------
+-- Highlight on yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight on yank",
+	group = vim.api.nvim_create_augroup("yankHighlight", { clear = true }),
+	callback = function()
+		vim.hl.on_yank()
+	end,
+})
