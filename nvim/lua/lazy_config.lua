@@ -24,5 +24,6 @@ require("lazy").setup({
 	install = { missing = true, colorscheme = { "solarized-osaka", "habamax" } },
 	ui = {
 		border = "rounded",
+		backdrop = 100,
 	},
 })
