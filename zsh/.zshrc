@@ -84,4 +84,5 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets)
 source ${ZDOTDIR}/modules/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey ${key[Up]} history-substring-search-up
 bindkey ${key[Down]} history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_GLOBBING_FLAGS="l"
 
