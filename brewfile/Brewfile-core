@@ -17,7 +17,6 @@ brew "fastfetch"
 brew "fd"
 brew "ripgrep"
 brew "tlrc"
-brew "tty-clock"
 
 # Other
 brew "lua-language-server"

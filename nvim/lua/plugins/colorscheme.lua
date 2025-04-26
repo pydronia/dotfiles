@@ -18,6 +18,15 @@ return {
 				colors.bg_sidebar = darker
 				colors.bg_float = darker
 			end,
+
+			-- Custom Highlights
+			on_highlights = function(hl, c)
+				hl.MatchParen = { fg = c.red100, bold = true } 
+
+				-- Treesitter Context
+				hl.TreesitterContext = { bg = c.base03 }
+				hl.TreesitterContextBottom = { sp = c.base01, underline = true }
+			end
 		})
 
 		vim.cmd.colorscheme("solarized-osaka")
