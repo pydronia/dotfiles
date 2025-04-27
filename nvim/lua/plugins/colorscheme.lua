@@ -21,7 +21,7 @@ return {
 
 			-- Custom Highlights
 			on_highlights = function(hl, c)
-				hl.MatchParen = { fg = c.red100, bold = true } 
+				hl.MatchParen = { fg = c.red100, bold = true }
 
 				-- Treesitter Context
 				hl.TreesitterContext = { bg = c.base03 }
