@@ -17,9 +17,6 @@ opt.shiftwidth = 3
 
 opt.breakindent = true
 
-opt.foldmethod = "expr"
-opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-
 opt.scrolloff = 8
 
 opt.ignorecase = true
@@ -36,6 +33,8 @@ opt.confirm = true
 
 opt.updatetime = 350
 opt.timeoutlen = 500
+
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
 -- After LSP Setup
 -- opt.signcolumn = <something>
