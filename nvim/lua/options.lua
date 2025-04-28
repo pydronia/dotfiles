@@ -11,11 +11,14 @@ opt.cursorline = true
 opt.tabstop = 3
 opt.shiftwidth = 3
 
-opt.breakindent = true
-
 -- After indent plugin
 -- opt.list = true
 -- opt.listchars = { tab = "▏ ", trail = "·", extends = "❭", precedes = "❬", nbsp = "+" }
+
+opt.breakindent = true
+
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
 opt.scrolloff = 8
 

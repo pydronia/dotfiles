@@ -1,3 +1,4 @@
+- cmdline completion
 - autopairs
 - snacks (indent, picker, statuscolumn)
 - gitsigns (style, keymaps)
