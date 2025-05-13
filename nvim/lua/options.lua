@@ -6,6 +6,8 @@ local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
 
+opt.signcolumn = "auto:1-3"
+
 opt.cursorline = true
 
 opt.tabstop = 3

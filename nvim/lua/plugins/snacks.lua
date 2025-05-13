@@ -15,6 +15,6 @@ return {
 			animate = {
 				enabled = false,
 			},
-		}
+		},
 	},
 }
