@@ -6,15 +6,18 @@ return {
 		indent = {
 			indent = {
 				enabled = true,
-				char = "▏ ", -- ▏, ▎,│
+				char = "▏", -- ▏,▎,│
 			},
 			scope = {
 				enabled = true,
-				char = "▏ ",
+				char = "▎",
 			},
 			animate = {
 				enabled = false,
 			},
 		},
 	},
+	keys = {
+		{ "<leader>sa", function() Snacks.picker() end, desc = "Find files" }
+	}
 }

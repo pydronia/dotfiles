@@ -20,6 +20,7 @@ return {
 			end,
 
 			-- Custom Highlights
+			---@param hl table
 			on_highlights = function(hl, c)
 				hl.MatchParen = { fg = c.red100, bold = true }
 
