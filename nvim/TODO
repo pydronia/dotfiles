@@ -1,4 +1,5 @@
-- snacks (indent, picker, statuscolumn)
+- snacks (picker, statuscolumn)
 - gitsigns (style, keymaps)
 - blink
+- more lsps (python, go)
 - autopairs

@@ -26,6 +26,9 @@ return {
 				-- Treesitter Context
 				hl.TreesitterContext = { bg = c.base03 }
 				hl.TreesitterContextBottom = { sp = c.base01, underline = true }
+
+				-- Indent guides
+				hl.SnacksIndent = { fg = c.base02, nocombine = true}
 			end
 		})
 

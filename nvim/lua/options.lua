@@ -11,9 +11,8 @@ opt.cursorline = true
 opt.tabstop = 3
 opt.shiftwidth = 3
 
--- After indent plugin
--- opt.list = true
--- opt.listchars = { tab = "▏ ", trail = "·", extends = "❭", precedes = "❬", nbsp = "+" }
+opt.list = true
+opt.listchars = { tab = "> ", trail = "·", extends = "❭", precedes = "❬", nbsp = "+" }
 
 opt.breakindent = true
 
