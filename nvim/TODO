@@ -1,6 +1,6 @@
-- blink
-- gitsigns (style, keymaps)
+- gitsigns (more keymaps)
 - more lsps (python, go)
-- lsp config (extra keybinds)
+- lsp config (extra keybinds, hover, diagnostics)
+- blink config
+- format on save
 - autopairs
-
