@@ -17,10 +17,6 @@ RPROMPT="%(?..%F{red}%?%f )%F{242}%*%f"
 source ${ZDOTDIR}/modules/zsh-you-should-use/you-should-use.plugin.zsh
 
 ## Program setup
-# nvim
-# TEMP TESTING LAZYVIM
-export NVIM_APPNAME="lazyvim"
-
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -66,6 +62,10 @@ alias gfr="git pull --rebase"
 # tmux
 alias tm="tmux"
 alias tms="tmux new-session -A -s $(hostname -s)"
+
+# nvim
+alias newnvim="\\nvim"
+alias nvim="NVIM_APPNAME=lazyvim nvim"
 
 ## Environment specific setup
 if [[ "$(hostname)" == MA* ]]; then

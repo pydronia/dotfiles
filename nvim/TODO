@@ -1,5 +1,5 @@
-- gitsigns (style, keymaps)
 - blink
+- gitsigns (style, keymaps)
 - more lsps (python, go)
 - lsp config (extra keybinds)
 - autopairs
