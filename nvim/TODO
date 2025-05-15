@@ -1,6 +1,8 @@
-- gitsigns (more keymaps)
-- more lsps (python, go)
-- lsp config (extra keybinds, hover, diagnostics)
+- get anything I need for work on mise, figure out if I can access poetry lsps in nvim
+- direnv replace with mise
+- more lsps (pyright, go)
+- lsp config (extra keybinds, hover, diagnostics config) (checkout kickstart)
 - blink config
-- format on save
+- format on save (conform?)
 - autopairs
+- colorscheme + styling nitpicks

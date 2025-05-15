@@ -1,3 +1,6 @@
+-- Prepend mise shims to nvim's PATH
+vim.env.PATH = vim.env.HOME .. "/.local/share/mise/shims:" .. vim.env.PATH
+
 ---------------
 -- Base Options
 ---------------

@@ -23,18 +23,22 @@ export HOMEBREW_NO_ANALYTICS=1
 # ripgrep
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
 
-# direnv
+# direnv TODO: get rid of this
 if command -v direnv &>/dev/null; then
 	eval "$(direnv hook zsh)"
 fi
 
 # mise
-eval "$(mise activate zsh)"
+if command -v mise &>/dev/null; then
+	eval "$(mise activate zsh)"
+fi
 
 # fzf
-export FZF_DEFAULT_OPTS="--walker-skip=.git,node_modules,Library"
-export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers {}'"
-source <(fzf --zsh)
+if command -v fzf &>/dev/null; then
+	export FZF_DEFAULT_OPTS="--walker-skip=.git,node_modules,Library"
+	export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers {}'"
+	source <(fzf --zsh)
+fi
 
 ## Aliases
 alias vea="source .venv/bin/activate"
@@ -64,7 +68,7 @@ alias tm="tmux"
 alias tms="tmux new-session -A -s $(hostname -s)"
 
 # nvim
-alias newnvim="\\nvim"
+alias nv="\\nvim"
 alias nvim="NVIM_APPNAME=lazyvim nvim"
 
 ## Environment specific setup
@@ -72,6 +76,8 @@ if [[ "$(hostname)" == MA* ]]; then
 	export LEDGER_FILE="$HOME/Documents/Finance/hledger.journal"
 else
 	hash -d km="$HOME/Documents/work/kumamushi-v2/"
+	export MISE_ENV="work"
+
 	source <(kubectl completion zsh)
 fi
 
