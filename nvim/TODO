@@ -6,3 +6,4 @@
 - format on save (conform?)
 - autopairs
 - colorscheme + styling nitpicks
+- winbar (filename + modified status)
