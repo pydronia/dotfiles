@@ -102,6 +102,7 @@ bindkey ${key[BackTab]} reverse-menu-complete
 # run-help
 # This is using the code that ghostty sends for control-m (fixterms)
 bindkey '\e[109;5u' run-help
+bindkey -M vicmd '\e[109;5u' run-help
 
 # Magic space
 bindkey ' ' magic-space

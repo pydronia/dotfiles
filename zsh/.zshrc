@@ -60,6 +60,7 @@ alias gAcm="git add -A; git commit -m"
 alias gco="git checkout"
 
 alias gp="git push"
+alias gpf="git push --force"
 alias gfm="git pull"
 alias gfr="git pull --rebase"
 
