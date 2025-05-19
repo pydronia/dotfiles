@@ -1,4 +1,3 @@
-- more lsps ([based]pyright, json + schemastore?)
 - lsp config (extra keybinds, hover, diagnostics config) (checkout kickstart)
 - format on save (conform?)
 - blink config
