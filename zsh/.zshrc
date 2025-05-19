@@ -23,7 +23,7 @@ export HOMEBREW_NO_ANALYTICS=1
 # ripgrep
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
 
-# direnv TODO: get rid of this
+# direnv
 if command -v direnv &>/dev/null; then
 	eval "$(direnv hook zsh)"
 fi

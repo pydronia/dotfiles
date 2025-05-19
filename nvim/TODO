@@ -1,5 +1,3 @@
-- get anything I need for work on mise, figure out if I can access poetry lsps in nvim (how should I install pyright?)
-- see if I can get rid of direnv?
 - more lsps ([based]pyright, go, json + schemastore?)
 - lsp config (extra keybinds, hover, diagnostics config) (checkout kickstart)
 - blink config
@@ -7,3 +5,5 @@
 - autopairs
 - colorscheme + styling nitpicks
 - winbar (filename + modified status)
+
+- reinstall other dev tools through mise if I can (colima, docker, terraform, etc)
