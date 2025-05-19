@@ -1,7 +1,8 @@
 - more lsps ([based]pyright, json + schemastore?)
 - lsp config (extra keybinds, hover, diagnostics config) (checkout kickstart)
-- blink config
 - format on save (conform?)
+- blink config
+
 - autopairs
 - colorscheme + styling nitpicks
 - winbar (filename + modified status)
