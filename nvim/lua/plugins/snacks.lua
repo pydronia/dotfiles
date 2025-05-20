@@ -48,12 +48,14 @@ return {
 	},
 	keys = {
 		-- Pickers
-		{ "<leader><space>", function() Snacks.picker.files({ dirs = utils.unique(vim.lsp.buf.list_workspace_folders()) }) end, desc = "Find all files" },
-		{ "<leader>/", function() Snacks.picker.grep({ dirs = utils.unique(vim.lsp.buf.list_workspace_folders()) }) end, desc = "Grep all files" },
+		{ "<leader><space>", function() Snacks.picker.files({ dirs = utils.unique(vim.lsp.buf.list_workspace_folders()) }) end, desc = "Find all files (workspace)" },
+		{ "<leader>/", function() Snacks.picker.grep({ dirs = utils.unique(vim.lsp.buf.list_workspace_folders()) }) end, desc = "Grep all files (workspace)" },
 		{ "<leader>,", function() Snacks.picker.buffers() end, desc = "Buffers" },
 
 		{ "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
 
+		{ "<leader>pF", function() Snacks.picker.files() end, desc = "Find all files (cwd)" },
+		{ "<leader>pG", function() Snacks.picker.grep() end, desc = "Grep all files (cwd)" },
 		{ "<leader>pc", function() Snacks.picker.commands() end, desc = "Commands" },
 		{ "<leader>pp", function() Snacks.picker.projects() end, desc = "Projects" },
 		{ "<leader>pH", function() Snacks.picker.help() end, desc = "Help pages" },

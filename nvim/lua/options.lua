@@ -50,7 +50,14 @@ opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Clear highlights on Esc
 vim.keymap.set("n", "<Esc>", "<Cmd>noh<CR>")
+
+-- Better scrolling
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-f>", "<C-f>zz")
+vim.keymap.set("n", "<C-b>", "<C-b>zz")
 
 ---------------
 -- Autocommands
