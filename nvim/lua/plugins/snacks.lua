@@ -1,3 +1,5 @@
+local utils = require("utils")
+
 return {
 	"folke/snacks.nvim",
 	priority = 1000,
@@ -46,8 +48,8 @@ return {
 	},
 	keys = {
 		-- Pickers
-		{ "<leader><space>", function() Snacks.picker.files({ dirs = vim.lsp.buf.list_workspace_folders() }) end, desc = "Find all files" },
-		{ "<leader>/", function() Snacks.picker.grep({ dirs = vim.lsp.buf.list_workspace_folders() }) end, desc = "Grep all files" },
+		{ "<leader><space>", function() Snacks.picker.files({ dirs = utils.unique(vim.lsp.buf.list_workspace_folders()) }) end, desc = "Find all files" },
+		{ "<leader>/", function() Snacks.picker.grep({ dirs = utils.unique(vim.lsp.buf.list_workspace_folders()) }) end, desc = "Grep all files" },
 		{ "<leader>,", function() Snacks.picker.buffers() end, desc = "Buffers" },
 
 		{ "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
