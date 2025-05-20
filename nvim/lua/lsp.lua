@@ -10,5 +10,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("my_lspattach", {}),
 	desc = "Configure LSP",
 	callback = function(args)
-	end
-}
+	end,
+})
