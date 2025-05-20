@@ -4,6 +4,7 @@ return {
 	opts = {
 		library = {
 			{ path = "snacks.nvim", words = { "Snacks", "snacks" } },
+			{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
 		}
 	}
 }

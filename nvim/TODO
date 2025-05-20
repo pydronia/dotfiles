@@ -1,4 +1,5 @@
-- lsp config (extra keybinds, hover, diagnostics config) (checkout kickstart)
+- fix todo highlighting in lua????????????????????
+- lsp config (diagnostics config, extra keybinds, hover (hold)) (checkout kickstart)
 - format on save (conform?)
 - blink config
 
