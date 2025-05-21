@@ -1,5 +1,3 @@
-- Research about last login text (not showing on login shell/tmux? but does on new window?)
-
 - lsp config (diagnostics config, extra keybinds, hover (hold)) (checkout kickstart)
 - format on save (conform?)
 - blink config
