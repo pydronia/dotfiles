@@ -82,6 +82,9 @@ else
 	source <(kubectl completion zsh)
 fi
 
+## Hooks
+source ${ZDOTDIR}/hooks.zsh
+
 ## Final module loads
 # zsh-syntax-highlighting
 source ${ZDOTDIR}/modules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
