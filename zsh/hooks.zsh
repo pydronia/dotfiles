@@ -21,7 +21,13 @@ if [[ $TERM != *ghostty* ]]; then
 	}
 	add-zsh-hook -Uz preexec reset-cursor-style
 
-	# TODO: Emit OSC 133 codes
+	# WIP: Emit OSC 133 codes. This is a very simple solution, and is
+	# only enough for tmux next-prompt [-o]
+	# PROMPT='%{\e]133;D\a\e]133;A\a%}${PROMPT}%{B\e]133;B\a%}'
+	# print-osc133-preexec() {
+	# 	print -n "\e]133;C\a"
+	# }
+	# add-zsh-hook -Uz preexec print-osc133-preexec
 fi
 
 # Set application mode ("keyboard-transit" mode?)
