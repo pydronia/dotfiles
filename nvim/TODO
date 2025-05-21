@@ -1,3 +1,5 @@
+- Research about last login text (not showing on login shell/tmux? but does on new window?)
+
 - lsp config (diagnostics config, extra keybinds, hover (hold)) (checkout kickstart)
 - format on save (conform?)
 - blink config
@@ -6,5 +8,6 @@
 - colorscheme + styling nitpicks
 - winbar (filename + modified status)
 - snacks picker extra config (toggle hidden, ignored keybinds)
+- snacks toggle term
 
 - reinstall other dev tools through mise if I can (colima, docker, terraform, etc)

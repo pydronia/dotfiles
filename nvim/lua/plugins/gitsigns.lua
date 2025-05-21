@@ -17,6 +17,7 @@ return {
 			vim.keymap.set("n", "<leader>hp", gitsigns.preview_hunk, { desc = "Preview hunk" })
 			vim.keymap.set("n", "<leader>hb", function() gitsigns.blame_line({ full = true }) end, { desc = "Blame line" })
 			vim.keymap.set("n", "<leader>hB", gitsigns.blame, { desc = "Blame file" })
+			-- TODO: Reset hunk keybind (+ confirm dialogue)
 		end,
 	}
 }
