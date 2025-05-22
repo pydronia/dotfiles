@@ -24,7 +24,10 @@ return {
 				---@param hl table
 				on_highlights = function(hl, c)
 					hl.MatchParen = { fg = c.red100, bold = true }
+
+					-- Tresitter overrides
 					hl["@module"] = { link = "Directory" }
+					hl["@comment.todo"] = { fg = c.todo, bold = true }
 
 					-- Treesitter Context
 					hl.TreesitterContext = { bg = c.base03 }

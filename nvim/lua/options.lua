@@ -9,7 +9,7 @@ local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
 
-opt.signcolumn = "auto:1-3"
+opt.signcolumn = "yes"
 
 opt.cursorline = true
 
@@ -40,18 +40,37 @@ opt.timeoutlen = 500
 
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
--- After LSP Setup
--- opt.signcolumn = <something>
--- vim.diagnostic.config....
+vim.diagnostic.config({
+	underline = true,
+	virtual_text = { -- try out virtual text on current line
+		current_line = true,
+		source = "if_many",
+		virt_text_pos = "eol_right_align"
+	},
+	virtual_lines = false,
+	signs = false,
+	float = {
+		source = "if_many",
+		border = "rounded"
+	},
+	update_in_insert = false,
+	severity_sort = true,
+	jump = {},
+})
+
 
 -------------------
--- General Mappings
+-- General Mapings
 -------------------
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Clear highlights on Esc
 vim.keymap.set("n", "<Esc>", "<Cmd>noh<CR>")
+
+-- Better up/down
+vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
+vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 
 -- Better scrolling
 vim.keymap.set("n", "<C-d>", "<C-d>zz")

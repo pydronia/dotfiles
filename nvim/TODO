@@ -1,4 +1,4 @@
-- lsp config (diagnostics config, extra keybinds, hover (hold)) (checkout kickstart)
+- lsp config (extra keybinds, hover (hold), show diagnostics (hold)) (checkout kickstart)
 - format on save (conform?)
 - blink config
 

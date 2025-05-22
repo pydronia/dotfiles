@@ -2,6 +2,7 @@ return {
 	"lewis6991/gitsigns.nvim",
 	event = { "BufNewFile", "BufRead" },
 	opts = {
+		sign_priority = 20,
 		on_attach = function(bufnr)
 			-- Setup keymaps
 			local gitsigns = require("gitsigns")
