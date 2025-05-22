@@ -117,7 +117,7 @@ autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste
 autoload -Uz url-quote-magic && zle -N self-insert url-quote-magic
 
 # Double dot expansion
-double-dot-expand() {
+double_dot_expand() {
 	# Expand .. at the beginning, after space, or after any of ! " & ' / ; < > |
 	if [[ ${LBUFFER} == (|*[[:space:]!\"\&\'/\;\<\>|]).. ]]; then
 	  LBUFFER+=/..
@@ -125,7 +125,63 @@ double-dot-expand() {
 	  LBUFFER+=.
 	fi
 }
-zle -N double-dot-expand
-bindkey . double-dot-expand
+zle -N double_dot_expand
+bindkey . double_dot_expand
 bindkey -M isearch . self-insert
+
+## Hooks
+autoload -Uz add-zle-hook-widget
+autoload -Uz add-zsh-hook
+
+# Shell features if in tmux
+if [[ $TERM == tmux* ]]; then
+	# Cursor shape adjustment
+	set_cursor_style() {
+		case ${KEYMAP-} in
+			vicmd|visual) echo -ne "\e[1 q";;
+			*) echo -ne "\e[5 q";;
+		esac
+	}
+	zle -N set_cursor_style
+	add-zle-hook-widget -Uz keymap-select set_cursor_style
+	add-zle-hook-widget -Uz line-init set_cursor_style
+
+	reset_cursor_style() {
+		echo -ne "\e[0 q"
+	}
+	add-zsh-hook -Uz preexec reset_cursor_style
+
+	# Emit OSC 133 codes. This is a simple implementation,
+	# but should be enough for tmux next-prompt [-o].
+	# See https://iterm2.com/documentation-escape-codes.html
+	osc133_first="1"
+	osc133_precmd() {
+		if [[ $osc133_first == "1" ]]; then
+			PROMPT=${PROMPT}$'%{\e]133;B\a%}'
+			osc133_first="0"
+		else
+			print -n "\e]133;D\a"
+		fi
+		print -n "\e]133;A\a"
+	}
+	add-zsh-hook -Uz precmd osc133_precmd
+	
+	osc133_preexec() {
+		print -n "\e]133;C\a"
+	}
+	add-zsh-hook -Uz preexec osc133_preexec
+fi
+
+# Set application mode ("keyboard-transit" mode?)
+if [[ -n ${terminfo[smkx]} && -n ${terminfo[rmkx]} ]]; then
+	# Enable application mode when zle is active
+	start_application_mode() {
+		echoti smkx
+	}
+	stop_application_mode() {
+		echoti rmkx
+	}
+	add-zle-hook-widget -Uz line-init start_application_mode
+	add-zle-hook-widget -Uz line-finish stop_application_mode
+fi
 
