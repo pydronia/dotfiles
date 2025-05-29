@@ -35,7 +35,7 @@ fi
 
 # fzf
 if command -v fzf &>/dev/null; then
-	export FZF_DEFAULT_OPTS="--walker-skip=.git,node_modules,Library"
+	export FZF_DEFAULT_OPTS="--walker-skip=.git,node_modules,Library,.venv"
 	export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers {}'"
 	source <(fzf --zsh)
 fi
