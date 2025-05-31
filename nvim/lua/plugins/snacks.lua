@@ -60,6 +60,10 @@ return {
 		{ "<leader>pp", function() Snacks.picker.projects() end, desc = "Projects" },
 		{ "<leader>pH", function() Snacks.picker.help() end, desc = "Help pages" },
 		{ "<leader>pr", function() Snacks.picker.resume() end, desc = "Resume last picker" },
-		{ "<leader>pa", function() Snacks.picker() end, desc = "All pickers" }
+		{ "<leader>pa", function() Snacks.picker() end, desc = "All pickers" },
+
+		-- Git
+		{ "<leader>gr", function() Snacks.gitbrowse.open({ what = "repo" }) end, desc = "Open remote repo" },
+		{ "<leader>gf", function() Snacks.gitbrowse.open({ what = "file" }) end, mode = {"n", "v"}, desc = "Open remote file" },
 	}
 }
