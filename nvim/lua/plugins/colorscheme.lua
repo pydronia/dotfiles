@@ -25,6 +25,13 @@ return {
 				on_highlights = function(hl, c)
 					hl.MatchParen = { fg = c.red100, bold = true }
 
+					-- LSP Highlights
+					hl.LspReferenceText = { bg = c.cyan900 }
+					hl.LspReferenceRead = { bg = c.cyan900 }
+					hl.LspReferenceWrite = { bg = c.cyan900 }
+					hl.LspReferenceTarget = { bg = c.cyan900 }
+
+
 					-- Tresitter overrides
 					hl["@module"] = { link = "Directory" }
 					hl["@comment.todo"] = { fg = c.todo, bold = true }
