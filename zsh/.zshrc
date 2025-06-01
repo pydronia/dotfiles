@@ -69,8 +69,7 @@ alias tm="tmux"
 alias tms="tmux new-session -A -s $(hostname -s)"
 
 # nvim
-alias nv="\\nvim"
-alias nvim="NVIM_APPNAME=lazyvim nvim"
+alias nv="nvim"
 
 ## Environment specific setup
 if [[ "$(hostname)" == MA* ]]; then
