@@ -47,19 +47,18 @@ vim.diagnostic.config({
 	virtual_text = { -- try out virtual text on current line
 		current_line = true,
 		source = "if_many",
-		virt_text_pos = "eol_right_align"
+		virt_text_pos = "eol_right_align",
 	},
 	virtual_lines = false,
 	signs = false,
 	float = {
 		source = "if_many",
-		border = "rounded"
+		border = "rounded",
 	},
 	update_in_insert = false,
 	severity_sort = true,
 	jump = {},
 })
-
 
 -------------------
 -- General Mapings

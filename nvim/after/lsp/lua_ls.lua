@@ -9,7 +9,6 @@ return {
 		"selene.toml",
 		"selene.yml",
 		"lua/",
-		".git"
-	}
+		".git",
+	},
 }
-

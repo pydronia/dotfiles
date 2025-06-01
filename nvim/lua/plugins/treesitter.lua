@@ -73,6 +73,6 @@ return {
 			max_lines = 3,
 			min_window_height = 25,
 			multiline_threshold = 1,
-		}
+		},
 	},
 }

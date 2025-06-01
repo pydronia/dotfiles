@@ -31,7 +31,6 @@ return {
 					hl.LspReferenceWrite = { bg = c.cyan900 }
 					hl.LspReferenceTarget = { bg = c.cyan900 }
 
-
 					-- Tresitter overrides
 					hl["@module"] = { link = "Directory" }
 					hl["@comment.todo"] = { fg = c.todo, bold = true }
@@ -41,8 +40,8 @@ return {
 					hl.TreesitterContextBottom = { sp = c.base01, underline = true }
 
 					-- Indent guides
-					hl.SnacksIndent = { fg = c.base02, nocombine = true}
-				end
+					hl.SnacksIndent = { fg = c.base02, nocombine = true }
+				end,
 			})
 
 			vim.cmd.colorscheme("solarized-osaka")
@@ -50,5 +49,5 @@ return {
 	},
 	{
 		"folke/tokyonight.nvim",
-	}
+	},
 }

@@ -30,12 +30,12 @@ return {
 					vim.api.nvim_create_autocmd({ "CursorHold" }, {
 						buffer = args.buf,
 						group = buflocal_group,
-						callback = vim.lsp.buf.document_highlight
+						callback = vim.lsp.buf.document_highlight,
 					})
 					vim.api.nvim_create_autocmd({ "CursorMoved", "InsertEnter", "BufLeave" }, {
 						buffer = args.buf,
 						group = buflocal_group,
-						callback = vim.lsp.buf.clear_references
+						callback = vim.lsp.buf.clear_references,
 					})
 				end
 
@@ -67,19 +67,22 @@ return {
 
 				if client:supports_method(methods.textDocument_inlayHint) then
 					buffer_map("<leader>ci", function()
-						vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({bufnr = args.buf}), {bufnr = args.buf})
+						vim.lsp.inlay_hint.enable(
+							not vim.lsp.inlay_hint.is_enabled({ bufnr = args.buf }),
+							{ bufnr = args.buf }
+						)
 					end, { desc = "LSP: Toggle Inlay Hints" })
 				end
 
 				-- Clear any buffer autocommands on detach
-				vim.api.nvim_create_autocmd('LspDetach', {
-					group = vim.api.nvim_create_augroup('lspdetach', { clear = true }),
+				vim.api.nvim_create_autocmd("LspDetach", {
+					group = vim.api.nvim_create_augroup("lspdetach", { clear = true }),
 					callback = function(args2)
 						vim.lsp.buf.clear_references()
-						vim.api.nvim_clear_autocmds({ group = 'lsp-buflocal', buffer = args2.buf })
+						vim.api.nvim_clear_autocmds({ group = "lsp-buflocal", buffer = args2.buf })
 					end,
 				})
 			end,
 		})
-	end
+	end,
 }
