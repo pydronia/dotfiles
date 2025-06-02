@@ -13,8 +13,10 @@ return {
 	},
 	opts = {
 		formatters_by_ft = {
+			-- See :h conform-formatters
 			lua = { "stylua" },
 			python = { "ruff_format" },
+			go = { "goimports", "gofmt", stop_after_first = true }
 		},
 		default_format_opts = {
 			lsp_format = "never",
