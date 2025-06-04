@@ -61,6 +61,7 @@ alias gco="git checkout"
 
 alias gp="git push"
 alias gpf="git push --force"
+alias gpu="git push -u origin HEAD"
 alias gfm="git pull"
 alias gfr="git pull --rebase"
 
