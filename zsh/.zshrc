@@ -41,6 +41,7 @@ if command -v fzf &>/dev/null; then
 fi
 
 ## Aliases
+hash -d cf=$XDG_CONFIG_HOME
 alias vea="source .venv/bin/activate"
 
 # git
