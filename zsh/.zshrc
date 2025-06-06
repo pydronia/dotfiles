@@ -75,7 +75,9 @@ alias nv="nvim"
 
 ## Environment specific setup
 if [[ "$(hostname)" == MA* ]]; then
-	export LEDGER_FILE="$HOME/Documents/Finance/hledger.journal"
+	export CLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+	export LEDGER_FILE="$CLOUD_DRIVE/Finance/hledger.journal"
+
 	alias led="nvim \$LEDGER_FILE"
 else
 	hash -d km="$HOME/Documents/work/kumamushi-v2/"
