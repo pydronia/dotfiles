@@ -19,6 +19,7 @@ return {
 				enabled = false,
 			},
 		},
+		input = { enabled = true },
 		picker = {
 			sources = {
 				files = {
@@ -116,6 +117,13 @@ return {
 		{
 			"<leader>pr",
 			function()
+				Snacks.picker.recent()
+			end,
+			desc = "Recent files",
+		},
+		{
+			"<leader>pR",
+			function()
 				Snacks.picker.resume()
 			end,
 			desc = "Resume last picker",
@@ -144,5 +152,6 @@ return {
 			mode = { "n", "v" },
 			desc = "Open remote file",
 		},
+		-- TODO: Open commit of current line blame
 	},
 }

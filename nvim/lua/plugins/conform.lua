@@ -19,7 +19,7 @@ return {
 			go = { "goimports", "gofmt", stop_after_first = true }
 		},
 		default_format_opts = {
-			lsp_format = "never",
+			lsp_format = "fallback",
 		},
 		format_on_save = function(bufnr)
 			-- Disable autoformat on certain filetypes
