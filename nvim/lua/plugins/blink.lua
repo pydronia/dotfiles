@@ -7,30 +7,46 @@ return {
 		-- Choose filetypes to disable on
 		-- enabled = function() return not vim.tbl_contains({"markdown"}, vim.bo.filetype) end,
 
-		-- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
-		-- 'super-tab' for mappings similar to vscode (tab to accept)
-		-- 'enter' for enter to accept
-		-- 'none' for no mappings
-		--
-		-- All presets have the following mappings:
-		-- C-space: Open menu or open docs if already open
-		-- C-n/C-p or Up/Down: Select next/previous item
-		-- C-e: Hide menu
-		-- C-k: Toggle signature help (if signature.enabled = true)
-		--
-		-- See :h blink-cmp-config-keymap for defining your own keymap
-		keymap = { preset = "default" },
-
-		appearance = {
-			-- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-			-- Adjusts spacing to ensure icons are aligned
-			nerd_font_variant = "mono",
+		keymap = {
+			preset = "default",
+			-- Add more keymaps here if neededed. See :h blink-cmp-config-keymap
+			-- Make <C-n> work with ghost_text
+			["<C-n>"] = { "show", "select_next", "fallback_to_mappings" },
 		},
 
-		-- (Default) Only show the documentation popup when manually triggered
-		completion = { documentation = { auto_show = false } },
+		completion = {
+			list = {
+				selection = {
+					preselect = true,
+					auto_insert = false,
+				},
+			},
+			menu = {
+				auto_show = false,
+			},
+			documentation = {
+				auto_show = true,
+				auto_show_delay_ms = 500,
+			},
+			ghost_text = {
+				enabled = true,
+			},
+		},
+
+		-- fuzzy = {
+		-- 	sorts = {
+		-- 		-- Prioritise exact matches
+		-- 		"exact",
+		-- 		"score",
+		-- 		"sort_text"
+		-- 	}
+		-- },
+
+		-- This kinda acts weird, see how it feels in python
+		-- signature = { enabled = true },
 
 		sources = {
+			-- might wanna add "omni" into here for ledger file?
 			default = { "lazydev", "lsp", "path", "snippets", "buffer" },
 			providers = {
 				lazydev = {
@@ -40,13 +56,6 @@ return {
 				},
 			},
 		},
-
-		-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
-		-- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
-		-- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
-		--
-		-- See the fuzzy documentation for more information
-		fuzzy = { implementation = "prefer_rust_with_warning" },
 	},
 	opts_extend = { "sources.default" },
 }

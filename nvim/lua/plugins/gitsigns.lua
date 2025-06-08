@@ -26,7 +26,7 @@ return {
 			vim.keymap.set("n", "<leader>hB", gitsigns.blame, { desc = "Blame file" })
 			vim.keymap.set("n", "<leader>hR", gitsigns.reset_hunk, { desc = "Reset hunk" })
 			vim.keymap.set("n", "<leader>hC", function()
-				vim.ui.input({ prompt = "Enter revision (blank to reset): ", b = { completion = true } }, function(input)
+				vim.ui.input({ prompt = "Enter revision (blank to reset): " }, function(input)
 					gitsigns.change_base(input ~= "" and input or nil, true)
 				end)
 			end, { desc = "Change global base" })
