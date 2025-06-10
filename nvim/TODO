@@ -4,7 +4,7 @@
 - colorscheme + styling nitpicks
 - winbar (filename + modified status)
 - snacks picker extra config (toggle hidden files, ignored files keybinds)
-- snacks toggle term
+- snacks toggle term, zen mode
 - dashboard
 
 - reinstall other dev tools through mise if I can (colima, docker, terraform, etc)
