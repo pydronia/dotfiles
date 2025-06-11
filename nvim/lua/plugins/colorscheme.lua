@@ -41,6 +41,10 @@ return {
 
 					-- Indent guides
 					hl.SnacksIndent = { fg = c.base02, nocombine = true }
+
+					-- mini.files
+					hl.MiniFilesNormal = { fg = c.base0, bg = c.bg }
+					hl.MiniFilesBorder = { fg = c.yellow700, bg = c.bg }
 				end,
 			})
 

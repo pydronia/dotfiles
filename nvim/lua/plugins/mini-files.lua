@@ -10,4 +10,16 @@ return {
 			preview = true
 		}
 	},
+	config = function(_, opts)
+		local minifiles = require("mini.files")
+		minifiles.setup(opts)
+
+		vim.api.nvim_create_autocmd("User", {
+			desc = "Add rounded corners",
+			pattern = "MiniFilesWindowOpen",
+			callback = function(args)
+				vim.api.nvim_win_set_config(args.data.win_id, { border = "rounded" })
+			end,
+		})
+	end
 }
