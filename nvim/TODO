@@ -1,10 +1,8 @@
-- snacks history
-
+- snacks picker extra config (toggle hidden files, ignored files, history keybinds)
 - winbar (filename + modified status)
 - snacks toggle term, zen mode
 - dashboard
 - autopairs
 - colorscheme + styling nitpicks
-- snacks picker extra config (toggle hidden files, ignored files keybinds)
 
 - reinstall other dev tools through mise if I can (colima, docker, terraform, etc)
