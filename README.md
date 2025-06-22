@@ -6,7 +6,7 @@ My collection of configuration files.
 2. Install git
 3. Clone this repo:
 ```
-git clone --recurse-submodules git@github.com:Pydronia/dotfiles.git "${HOME}/.config"
+git clone --recurse-submodules git@github.com:pydronia/dotfiles.git "${HOME}/.config"
 ```
 4. Run `setup.sh`
 5. Install fonts from google drive
