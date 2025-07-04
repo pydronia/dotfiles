@@ -29,7 +29,15 @@ return {
 				auto_show_delay_ms = 500,
 			},
 			ghost_text = {
-				enabled = true,
+				enabled = function()
+					-- Disable ghost text in comments because it's annoying
+					local r, c = unpack(vim.api.nvim_win_get_cursor(0))
+					local ok, node = pcall(vim.treesitter.get_node, { pos = { r - 1, math.max(0, c - 1) } }) -- Get pos one before cursor (row is 1-indexed in above line)
+					if ok and node and node:type():find("comment", 1, true) ~= nil then
+						return false
+					end
+					return true
+				end,
 			},
 		},
 
