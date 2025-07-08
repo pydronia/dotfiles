@@ -1,0 +1,10 @@
+- snacks picker extra config (toggle hidden files, ignored files, history keybinds)
+- fix conform formatting?
+- snacks notify stuff
+- winbar (filename + modified status)
+- snacks toggle term, zen mode
+- dashboard
+- autopairs
+- colorscheme + styling nitpicks
+
+- reinstall other dev tools through mise if I can (colima, docker, terraform, etc)

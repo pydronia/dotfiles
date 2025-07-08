@@ -1,0 +1,17 @@
+[user]
+	name = Jack
+	email = 7018930+pydronia@users.noreply.github.com
+	signingkey = ~/.ssh/id_ed25519.pub
+[core]
+	editor = nvim
+	excludesfile = ~/.config/git/.gitignore_global
+[init]
+	defaultBranch = main
+[status]
+	submoduleSummary = true
+[credential]
+	helper = osxkeychain
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
