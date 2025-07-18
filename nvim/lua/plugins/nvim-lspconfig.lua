@@ -11,6 +11,7 @@ return {
 			"ruff",
 			"pyright",
 			"gopls",
+			"terraformls",
 		})
 
 		vim.api.nvim_create_autocmd("LspAttach", {
