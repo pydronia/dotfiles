@@ -56,9 +56,6 @@ return {
 		sources = {
 			-- might wanna add "omni" into here for ledger file?
 			default = { "lazydev", "lsp", "path", "snippets", "buffer" },
-			per_filetype = {
-				ledger = { "omni" },
-			},
 			providers = {
 				lazydev = {
 					name = "LazyDev",
