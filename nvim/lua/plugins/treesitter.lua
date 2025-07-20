@@ -12,6 +12,7 @@ return {
 				"bash",
 				"comment",
 				"c",
+				"ledger",
 				"lua",
 				"vim",
 				"vimdoc",
