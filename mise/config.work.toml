@@ -1,5 +1,2 @@
-[tools]
-poetry = { version = "latest", postinstall = "poetry completions zsh >| ~/.local/share/zsh/completions/_poetry" }
-
 [settings]
-idiomatic_version_file_enable_tools = ["python", "node", "go"]
+idiomatic_version_file_enable_tools = ["node"]
