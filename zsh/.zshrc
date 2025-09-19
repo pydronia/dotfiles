@@ -1,6 +1,10 @@
 ## TODO:
 # - Write function to open git repository in browser
 
+# Profiling
+echo "あじまるあじまる！！"
+zmodload zsh/zprof
+
 source ${ZDOTDIR}/general.zsh # General zsh options
 source ${ZDOTDIR}/utility.zsh # General utility options/aliases
 source ${ZDOTDIR}/completion.zsh # Completions setup
@@ -97,3 +101,5 @@ bindkey ${key[Up]} history-substring-search-up
 bindkey ${key[Down]} history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_GLOBBING_FLAGS="l"
 
+# End profiling
+zprof

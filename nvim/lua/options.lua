@@ -20,8 +20,6 @@ opt.list = true
 opt.listchars = { tab = "> ", trail = "·", extends = "❭", precedes = "❬", nbsp = "+" }
 
 opt.breakindent = true
-opt.breakindentopt = "shift:-2"
-opt.showbreak = "↪ "
 
 opt.scrolloff = 8
 

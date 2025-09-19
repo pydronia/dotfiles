@@ -1,7 +1,7 @@
 # Appearance and Behaviour
 theme = solarized_osaka
 
-font-family = "Input Mono NF"
+font-family = "Input Mono"
 font-synthetic-style = false
 font-thicken = true
 font-thicken-strength = 128
