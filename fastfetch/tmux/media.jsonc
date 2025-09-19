@@ -1,10 +1,7 @@
-// Use like `fastfetch -c ~/.config/fastfetch/tmux/media.jsonc --media-format "{1}"`
+// Use like `fastfetch -c ~/.config/fastfetch/tmux/media.jsonc`
 {
 	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 	"logo": "none",
-	"general": {
-		"multithreading": false
-	},
 	"display": {
 		"pipe": true,
 		"key": {
@@ -12,6 +9,13 @@
 		}
 	},
 	"modules": [
-		"media"
+		{
+			"type": "player",
+			"format": "{player}"
+		},
+		{
+			"type": "media",
+			"format": "{status}\n{artist} - {combined}"
+		},
 	]
 }
