@@ -9,8 +9,6 @@
 	defaultBranch = main
 [status]
 	submoduleSummary = true
-[credential]
-	helper = osxkeychain
 [gpg]
 	format = ssh
 [commit]
