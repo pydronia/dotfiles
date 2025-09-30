@@ -1,6 +1,8 @@
 [tools]
-poetry = "latest"
 uv = "latest"
+kubectl = "latest"
+kubectx = "latest"
+kubens = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

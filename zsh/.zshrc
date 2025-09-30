@@ -87,7 +87,9 @@ else
 	hash -d km="$HOME/Documents/work/kumamushi-v2/"
 	export MISE_ENV="work"
 
-	source <(kubectl completion zsh)
+	if command -v kubectl &>/dev/null; then
+		source <(kubectl completion zsh)
+	fi
 fi
 
 ## Final module loads
