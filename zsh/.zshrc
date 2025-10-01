@@ -1,6 +1,5 @@
 ## TODO:
 # - Write function to open git repository in browser
-# - Write in configs for arch (plugin directory, also completion.zsh)
 
 # Profiling
 # echo "あじまるあじまる！！"
