@@ -10,10 +10,6 @@
 	path = zsh/modules/zsh-history-substring-search
 	url = git@github.com:zsh-users/zsh-history-substring-search.git
 	shallow = true
-[submodule "zsh/modules/zsh-you-should-use"]
-	path = zsh/modules/zsh-you-should-use
-	url = git@github.com:MichaelAquilina/zsh-you-should-use.git
-	shallow = true
 [submodule "zsh/modules/zsh-completions"]
 	path = zsh/modules/zsh-completions
 	url = git@github.com:zsh-users/zsh-completions.git
