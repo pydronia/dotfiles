@@ -9,9 +9,9 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 # Colors made using https://geoff.greer.fm/lscolors/
 # BSD
 export LSCOLORS='ExfxcxdxbxGxDxabagacad'
-# Linux (this is needed for zsh completion "list-colors")
+# Linux
 export LS_COLORS='di=1;34:ln=35:so=32:pi=33:ex=31:bd=1;36:cd=1;33:su=30;41:sg=30;46:tw=30;42:ow=30;43'
-alias ls='ls -G'
+alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias l='ll -A'
 

@@ -47,7 +47,8 @@ fpath=(
 # 	if [[ ! ${zdumpfile}.zwc -nt ${zdumpfile} ]] zcompile ${zdumpfile}
 # }
 
-autoload -Uz compinit; compinit
+autoload -Uz compinit
+compinit -d ${XDG_CACHE_HOME}/zsh/.zcompdump
 
 # Zsh options
 # These options result in the first press listing options + completing any unambigious prefixes,
