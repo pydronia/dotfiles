@@ -1,5 +1,6 @@
 ## TODO:
 # - Write function to open git repository in browser
+# - Write in configs for arch (plugin directory, also completion.zsh)
 
 # Profiling
 echo "あじまるあじまる！！"
@@ -17,13 +18,7 @@ prompt pure
 zstyle :prompt:pure:git:stash show yes
 RPROMPT="%(?..%F{red}%?%f )%F{242}%*%f"
 
-# zsh-you-should-use
-source ${ZDOTDIR}/modules/zsh-you-should-use/you-should-use.plugin.zsh
-
 ## Program setup
-# homebrew
-export HOMEBREW_NO_ANALYTICS=1
-
 # ripgrep
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
 
@@ -77,18 +72,21 @@ alias tms="tmux new-session -A -s $(hostname -s)"
 # nvim
 alias nv="nvim"
 
-## Environment specific setup
-if [[ "$(hostname)" == MA* ]]; then
-	export CLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
-	export LEDGER_FILE="$CLOUD_DRIVE/Finance/hledger.journal"
+## Environment specific setup (prefixes for privacy)
+case "$(hostname)" in
+	MA*)
+		export CLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+		export LEDGER_FILE="$CLOUD_DRIVE/Finance/hledger.journal"
+		alias led="nvim \$LEDGER_FILE"
+		;;
+	IIT**)
+		hash -d km="$HOME/Documents/work/kumamushi-v2/"
+		export MISE_ENV="work"
 
-	alias led="nvim \$LEDGER_FILE"
-else
-	hash -d km="$HOME/Documents/work/kumamushi-v2/"
-	export MISE_ENV="work"
-
-	source <(kubectl completion zsh)
-fi
+		if command -v kubectl &>/dev/null; then
+			source <(kubectl completion zsh)
+		fi
+esac
 
 ## Final module loads
 # zsh-syntax-highlighting

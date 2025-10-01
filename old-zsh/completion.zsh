@@ -9,6 +9,7 @@ fpath=(
 
 # Update dumpfile if neccessary and load completions
 # Taken from https://github.com/zimfw/completion/blob/master/init.zsh
+# This is slow :( need to work on this...
 () {
 	builtin emulate -L zsh -o EXTENDED_GLOB
 	# Check if dumpfile is up-to-date by comparing the full path and
