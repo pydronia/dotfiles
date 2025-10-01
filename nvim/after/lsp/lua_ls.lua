@@ -1,3 +1,5 @@
+-- add lua/ to root markers
+
 ---@type vim.lsp.Config
 return {
 	root_markers = {
