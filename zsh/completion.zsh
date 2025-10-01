@@ -1,6 +1,6 @@
 ### SETUP ZSH COMPLETIONS
 
-# Completion sources
+# Extra completion sources
 fpath=(
 	$HOME/.local/share/zsh/completions # local completions
 	${ZDOTDIR}/modules/zsh-completions/src # zsh-completions
@@ -9,43 +9,45 @@ fpath=(
 
 # Update dumpfile if neccessary and load completions
 # Taken from https://github.com/zimfw/completion/blob/master/init.zsh
-# This is slow :( need to work on this...
-() {
-	builtin emulate -L zsh -o EXTENDED_GLOB
-	# Check if dumpfile is up-to-date by comparing the full path and
-	# last modification time of all the completion functions in fpath.
-	local zdumpfile zstats zold_dat
-	local -i zdump_dat=1
-	mkdir -p ${XDG_CACHE_HOME}/zsh
-	zdumpfile=${XDG_CACHE_HOME}/zsh/.zcompdump
+# This is slow :( so disabling for now...
+# () {
+# 	builtin emulate -L zsh -o EXTENDED_GLOB
+# 	# Check if dumpfile is up-to-date by comparing the full path and
+# 	# last modification time of all the completion functions in fpath.
+# 	local zdumpfile zstats zold_dat
+# 	local -i zdump_dat=1
+# 	mkdir -p ${XDG_CACHE_HOME}/zsh
+# 	zdumpfile=${XDG_CACHE_HOME}/zsh/.zcompdump
+#
+# 	# Get last modified time of all completion files in fpath, store in zstats
+# 	LC_ALL=C local -r zcomps=(${^fpath}/^([^_]*|*~|*.zwc)(N))
+# 	if (( ${#zcomps} )); then
+# 		zmodload -F zsh/stat b:zstat && zstat -A zstats +mtime ${zcomps} || return 1
+# 	fi
+#
+# 	# Make dat for current completion, compare to existing file if it exists and remove
+# 	# existing if it's changed.
+# 	local -r znew_dat=${ZSH_VERSION}$'\0'${(pj:\0:)zcomps}$'\0'${(pj:\0:)zstats}
+# 	if [[ -e ${zdumpfile}.dat ]]; then
+# 		zmodload -F zsh/system b:sysread && sysread -s ${#znew_dat} zold_dat <${zdumpfile}.dat || return 1
+# 		if [[ ${zold_dat} == ${znew_dat} ]] zdump_dat=0
+# 	fi
+# 	if (( zdump_dat )); then
+# 		command rm -f ${zdumpfile}(|.dat|.zwc(|.old))(N) || return 1
+# 	fi
+#
+# 	# Load and initialize the completion system
+# 	autoload -Uz compinit && compinit -C -d ${zdumpfile} || return 1
+#
+# 	if [[ ! ${zdumpfile}.dat -nt ${zdumpfile} ]]; then
+# 		>! ${zdumpfile}.dat <<<${znew_dat}
+# 	fi
+#
+# 	# Compile the completion dumpfile; significant speedup
+# 	if [[ ! ${zdumpfile}.zwc -nt ${zdumpfile} ]] zcompile ${zdumpfile}
+# }
 
-	# Get last modified time of all completion files in fpath, store in zstats
-	LC_ALL=C local -r zcomps=(${^fpath}/^([^_]*|*~|*.zwc)(N))
-	if (( ${#zcomps} )); then
-		zmodload -F zsh/stat b:zstat && zstat -A zstats +mtime ${zcomps} || return 1
-	fi
-
-	# Make dat for current completion, compare to existing file if it exists and remove
-	# existing if it's changed.
-	local -r znew_dat=${ZSH_VERSION}$'\0'${(pj:\0:)zcomps}$'\0'${(pj:\0:)zstats}
-	if [[ -e ${zdumpfile}.dat ]]; then
-		zmodload -F zsh/system b:sysread && sysread -s ${#znew_dat} zold_dat <${zdumpfile}.dat || return 1
-		if [[ ${zold_dat} == ${znew_dat} ]] zdump_dat=0
-	fi
-	if (( zdump_dat )); then
-		command rm -f ${zdumpfile}(|.dat|.zwc(|.old))(N) || return 1
-	fi
-
-	# Load and initialize the completion system
-	autoload -Uz compinit && compinit -C -d ${zdumpfile} || return 1
-
-	if [[ ! ${zdumpfile}.dat -nt ${zdumpfile} ]]; then
-		>! ${zdumpfile}.dat <<<${znew_dat}
-	fi
-
-	# Compile the completion dumpfile; significant speedup
-	if [[ ! ${zdumpfile}.zwc -nt ${zdumpfile} ]] zcompile ${zdumpfile}
-}
+autoload -Uz compinit; compinit
 
 # Zsh options
 # These options result in the first press listing options + completing any unambigious prefixes,

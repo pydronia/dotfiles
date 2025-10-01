@@ -3,8 +3,8 @@
 # - Write in configs for arch (plugin directory, also completion.zsh)
 
 # Profiling
-echo "あじまるあじまる！！"
-zmodload zsh/zprof
+# echo "あじまるあじまる！！"
+# zmodload zsh/zprof
 
 source ${ZDOTDIR}/general.zsh # General zsh options
 source ${ZDOTDIR}/utility.zsh # General utility options/aliases
@@ -17,27 +17,6 @@ autoload -U promptinit; promptinit
 prompt pure
 zstyle :prompt:pure:git:stash show yes
 RPROMPT="%(?..%F{red}%?%f )%F{242}%*%f"
-
-## Program setup
-# ripgrep
-export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
-
-# direnv
-if command -v direnv &>/dev/null; then
-	eval "$(direnv hook zsh)"
-fi
-
-# mise
-if command -v mise &>/dev/null; then
-	eval "$(mise activate zsh)"
-fi
-
-# fzf
-if command -v fzf &>/dev/null; then
-	export FZF_DEFAULT_OPTS="--walker-skip=.git,node_modules,Library,.venv,.npm,.cache,.local"
-	export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers {}'"
-	source <(fzf --zsh)
-fi
 
 ## Aliases
 hash -d cf=$XDG_CONFIG_HOME
@@ -72,6 +51,22 @@ alias tms="tmux new-session -A -s $(hostname -s)"
 # nvim
 alias nv="nvim"
 
+## Program setup
+# ripgrep
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
+
+# mise
+if command -v mise &>/dev/null; then
+	eval "$(mise activate zsh)"
+fi
+
+# fzf
+if command -v fzf &>/dev/null; then
+	export FZF_DEFAULT_OPTS="--walker-skip=.git,node_modules,Library,.venv,.npm,.cache,.local"
+	export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers {}'"
+	source <(fzf --zsh)
+fi
+
 ## Environment specific setup (prefixes for privacy)
 case "$(hostname)" in
 	MA*)
@@ -85,6 +80,10 @@ case "$(hostname)" in
 
 		if command -v kubectl &>/dev/null; then
 			source <(kubectl completion zsh)
+		fi
+
+		if command -v direnv &>/dev/null; then
+			eval "$(direnv hook zsh)"
 		fi
 esac
 
@@ -100,4 +99,4 @@ bindkey ${key[Down]} history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_GLOBBING_FLAGS="l"
 
 # End profiling
-zprof
+# zprof
