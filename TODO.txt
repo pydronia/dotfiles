@@ -1,6 +1,9 @@
 Config TODO:
 
-- Reconfigure keyboard. Do this on Windows through a browser, and probably switch to mac layer, make command key to right, and set up media keys properly under a layer.
+- Reconfigure keyboard. Do this on Windows through a browser, completely reset firmware, update firmware, probably switch to mac layer, make command key to right, and set up media keys properly under a layer (F keys on top for now)
+- consider upping mouse dpi to 1600, set windows setting to 4/11, hyprland sens to 0.5 (check if it works with force_no_accel)
 - Hyprland binds. Keep it relatively simple for now maybe...
 - App launcher
 - Firefox
+- spotify
+- veskord
