@@ -1,11 +1,10 @@
 Config TODO:
 
-- Hyprland binds. Keep it relatively simple for now maybe...
-- App launcher
-- mako
-- monitor backlight stuff
+- Continue configuring Hyprland (dwindle, keep going through docs (screenshot, flux dimming, idle))
 - fontconfig
 - audio
+- mako (volume notifications?)
+- App launcher
 - ghostty
 - Firefox
 - spotify
