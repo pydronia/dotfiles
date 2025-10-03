@@ -1,0 +1,26 @@
+This is a small file to keep track of my Arch installation process, so I can recreate it again in
+the future if I need to, or potentially write an install script.
+
+Initial packages can be minimal, but I'll make a file with explicitly installed packages later
+
+Initial installation (after pacstrap):
+- Mostly just follow wiki.archlinux.org/title/Installation_guide and other pages
+- Fstab, chroot
+- time + time syncronization
+- Generate locales, include en_US.UTF-8, en_AU.UTF-8, ja_JP.UTF-8, set locale variables
+- set hostname, add "127.0.1.1 <hostname>" in /etc/hosts
+- setup network with systemd-resolved and networkmanager (Disable LLMNR)
+- Set root password
+- Install bootloader (systemd-boot)
+
+Now boot directly and set things up
+- Add required packages
+- IPv6 privacy extentions
+- Make sure zsh in /etc/shells
+- Create user account in wheel, with zsh
+- Add wheel in sudoers  
+- Disable root account
+- Add SSH key
+- Add shell config
+- install nvidia drivers (dkms, lib32 utils, add to mkinitcpio modules)
+- hyprland, other user config
