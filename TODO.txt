@@ -1,0 +1,6 @@
+Config TODO:
+
+- Reconfigure keyboard. Do this on Windows through a browser, and probably switch to mac layer, make command key to right, and set up media keys properly under a layer.
+- Hyprland binds. Keep it relatively simple for now maybe...
+- App launcher
+- Firefox
