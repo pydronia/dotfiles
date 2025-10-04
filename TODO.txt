@@ -1,12 +1,14 @@
 Config TODO:
 
-- Continue configuring Hyprland (dwindle, keep going through docs (screenshot, flux dimming, idle))
 - fontconfig
 - audio
-- mako (volume notifications?)
-- App launcher
+- mako (volume notifications? or another tool?)
+- rofi
 - ghostty
 - Firefox
 - spotify
 - veskord
+- mpv
+- file manager
+- screenshot
 - firewall (don't forget mdns 5353 udp, looks like it's open on mac)
