@@ -1,5 +1,1 @@
-.zsh_history
-.zcompdump*
-
-colima
-configstore
+dconf
