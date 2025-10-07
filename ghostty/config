@@ -2,7 +2,6 @@
 theme = solarized_osaka
 
 font-family = "Input Mono"
-font-family = "Noto Sans JP"
 font-synthetic-style = false
 font-thicken = true
 font-thicken-strength = 128
